@@ -59,7 +59,7 @@
     <string name="exact_timer">Nøjagtig timer?</string>
     <string name="exact">Nøjagtig</string>
     <string name="inexact">Unøjagtig</string>
-    <string name="repeative_timer">Gentagbar timer?</string>
+    <string name="repeative_timer">Gentagelig timer?</string>
     <string name="repeat">Gentage</string>
     <string name="one_time">Én gang</string>
     <string name="minutes">Minutter</string>
@@ -79,11 +79,16 @@
     <string name="event_headset__microphone_false">Nej</string>
     <string name="event_headset__microphone_any">Enhver</string>
 
-    <string name="event_tcp_trip">TCP Trip</string>
+    <string name="event_tcp_trip">TCP udløser</string>
     <string name="remote_host">Fjern vært</string>
     <string name="send_data">Sende data</string>
     <string name="check_reply">Kontrollere svar</string>
     <string name="reply_data">Svar data</string>
+
+    <string name="event_screen">Skærm status</string>
+    <string name="ev_screen_text_screen_is">Når skærm er…</string>
+    <string name="ev_screen_on">Til</string>
+    <string name="ev_screen_off">Fra</string>
 
     <string name="operation_wifi">Trådløs</string>
     <string name="operation_cellular">Mobil data</string>
@@ -131,12 +136,13 @@
     <string name="o_nettrans_remote_port">Fjern port</string>
     <string name="o_nettrans_data">Data</string>
 
-    <string name="operation_media_control">Media kontrol</string>
+    <string name="operation_media_control">Medie kontrol</string>
     <string name="text_play_pause">Skifte mellem afspil/pause</string>
     <string name="text_play">Afspil</string>
     <string name="text_pause">Pause</string>
     <string name="text_previous">Forrige</string>
     <string name="text_next">Næste</string>
+    <string name="operation_media_control_helper_service_label">Hjælper til medie kontrol</string>
 
     <string name="operation_airplane_mode">Fly tilstand</string>
 
@@ -162,5 +168,15 @@
     <string name="o_volume_media">Medie</string>
     <string name="o_volume_alarm">Alarm</string>
     <string name="o_volume_notification">Påmindelse</string>
+    <string name="o_volume_bluetooth">Bluetooth</string>
+    <string name="o_volume_delay">Forsinke (s)</string>
+
+    <string name="op_launch_app">Starte program</string>
+    <string name="op_launch_app_text_app">Program</string>
+    <string name="op_launch_app_text_package_name">Pakke navn</string>
+
+    <string name="op_ui_mode">Bil tilstand</string>
+    <string name="op_car_mode">Bil tilstand</string>
+    <string name="op_normal_mode">Normal tilstand</string>
 
 </resources>
