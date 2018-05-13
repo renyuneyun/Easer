@@ -5,14 +5,18 @@
     <string name="title_operation">Handling</string>
     <string name="title_profile">Profil</string>
     <string name="title_event">Hændelse</string>
+    <string name="title_script">Skript</string>
     <string name="title_scenario">Scenarie</string>
+    <string name="title_condition">Betingelse</string>
     <string name="title_application">Program</string>
+    <string name="title_activity_log">Aktivitetslog</string>
     <string name="title_about">Om</string>
     <string name="title_setting">Opsætning</string>
     <string name="title_add">Tilføje</string>
     <string name="title_edit">Redigere</string>
     <string name="title_delete">Slette</string>
     <string name="title_edit_event">Redigere hændelse</string>
+    <string name="title_edit_condition">Redigere betingelse</string>
     <string name="title_edit_profile">Redigere profil</string>
     <string name="title_select_operation">Vælge handling</string>
 
@@ -23,6 +27,7 @@
     <string name="service_indicator_positive">Kører</string>
     <string name="service_indicator_negative">Kører ikke</string>
     <string name="profile_indicator_last">Seneste profil:</string>
+    <string name="profile_indicator_profile">Profil</string>
     <string name="profile_indicator_from">Fra hændelse</string>
     <string name="profile_indicator_time">Indlæst tidspunkt</string>
 
@@ -40,10 +45,12 @@
     <string name="button_request_permission">Tillad rettigheder</string>
 
     <string name="text_title">Titel:</string>
+    <string name="text_parent_node">Forælder</string>
     <string name="text_parent">Forælder:</string>
     <string name="text_profile">Profil:</string>
     <string name="text_use_scenario">Brug scenarie</string>
     <string name="text_inline_scenario">Integreret scenarie</string>
+    <string name="text_use_condition">Brug betingelse</string>
     <string name="text_repeatable_desc">Gentagbar når tilfreds</string>
     <string name="text_reverse_desc">Omvendt scenarie</string>
     <string name="text_volatile">Omskiftelig</string>
@@ -52,8 +59,10 @@
     <string name="toggle_active">Aktiv</string>
 
     <string name="hint_event_title">hændelse titel</string>
+    <string name="hint_script_title">skript titel</string>
     <string name="hint_profile_title">profil titel</string>
     <string name="hint_scenario_title">scenarie titel</string>
+    <string name="hint_condition_title">betingelse titel</string>
 
     <string name="prompt_save_failed">Kan ikke gemme</string>
     <string name="prompt_delete">Slette: %s</string>
@@ -84,10 +93,13 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="myWebsite" translatable="false">http://renyuneyun.is-programmer.com/</string>
 
     <string name="pref_category_functionality">Funktionalitet</string>
+    <string name="pref_category_personalise">Personliggøre</string>
     <string name="pref_category_data_manage">Data håndtering</string>
 
     <string name="pref_autostart_title">Autostarte ved opstart</string>
     <string name="pref_autostart_summary">Starte Easer baggrunds-tjeneste automatisk</string>
+
+    <string name="pref_restart_after_upgrade_title">Start tjeneste efter opgradering</string>
 
     <string name="pref_welcome_title">Vise velkommen besked</string>
     <string name="pref_welcome_summary">Vise velkommen besked ved program opstart</string>
@@ -109,9 +121,11 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="pref_enabled_plugins_title">Aktiverede udvidelses-moduler</string>
     <string name="pref_enabled_plugins_summary">Aktivere eller deaktivere udvidelses-moduler</string>
 
+    <string name="pref_use_12_hour_clock_title">Brug 12 timers ur</string>
+
     <string name="pref_export_title">Eksport</string>
     <string name="pref_export_summary">Eksportere alle hændelser og profiler til sd-kort.\nFiler navngives efter aktuel tid.</string>
-    <string name="pref_import_title">Import</string>
+    <string name="pref_import_title">Importere</string>
     <string name="pref_import_summary">Importere alle hændelser og profiler i en pakket zip-fil.\nEksisterende hændelser og profiler med samme navn vil blive overskrevet.</string>
 
     <string name="pref_convert_data_title">Konvertere data</string>
@@ -126,11 +140,14 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
 
     <string name="title_welcome_message">Velkommen</string>
     <string name="welcome_message">Velkommen til Easer!
-        \nHope you like this app :)
+        \nForhåbentligt kan du bruge programmet :)
         \n\nLæs følgende før start:\n
     1. Tillad Easer rettigheder før brug af relevante hændelser og profiler.\n
     2. Forbinde hændelser som <a href="https://en.wikipedia.org/wiki/Tree_structure">træer</a> er for NUVÆRENDE eneste måde at sammensætte hændelser.
         \n\nSe også <a href="https://github.com/renyuneyun/Easer/wiki/FAQ">FAQ</a> i projekt wiki.</string>
+
+    <string name="alert_update_storage_data_title">Ældre data version fundet</string>
+    <string name="alert_update_storage_data">Data er oprettet i en ældre version. Det anbefales at opdatere til ny version ellers vil Easer måske ikke fungere korrekt. Dette kan gøres ved at vælge "Konvertere data" under opsætning.</string>
 
     <string name="template_export">Eksporteret til %s</string>
     <string name="version">Version</string>
