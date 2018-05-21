@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="ev_condition_event">Tilstandshændelse</string>
+    <string name="condition_event_enter">Ankomme</string>
+    <string name="condition_event_leave">Forlade</string>
+
     <string name="event_time">Tidspunkt</string>
     <string name="event_date">Dato</string>
 
@@ -116,12 +121,12 @@
     <string name="ringer_mode_normal">Normal</string>
     <string name="ringer_mode_vibrate">Vibrere</string>
     <string name="ringer_mode_silent">Stille</string>
-    <string name="ringer_mode_dnd">Forstyre ikke</string>
+    <string name="ringer_mode_dnd">Forstyrre ikke</string>
     <string name="ringer_mode_dnd_all">Alle</string>
     <string name="ringer_mode_dnd_priority">Prioritet</string>
     <string name="ringer_mode_dnd_none">Ingen</string>
     <string name="ringer_mode_dnd_alarms">Alarmer</string>
-    <string name="ringing_items_in_do_not_disturb_mode">Opkaldselementer i forstyr ikke tilstand</string>
+    <string name="ringing_items_in_do_not_disturb_mode">Opkaldselementer i forstyrre ikke tilstand</string>
     <string name="label_operation_ringer_mode_notification_listener_service">Easer (Ændre stille tilstand)</string>
 
     <string name="operation_command">Udføre kommandoer</string>
@@ -159,7 +164,7 @@
     <string name="operation_alarm__time">Tid</string>
     <string name="operation_alarm__message">Besked</string>
 
-    <string name="operation_event_control">Kontrollere hændelses-status</string>
+    <string name="operation_event_control">Kontrollere hændelse status</string>
     <string name="change_status_to">Ændre status til…</string>
     <string name="unsatisfied">Ikke tilfreds</string>
 
