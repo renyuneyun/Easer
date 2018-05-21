@@ -22,7 +22,7 @@
 
     <string name="menu_start">Start</string>
     <string name="menu_stop">Stop</string>
-    <string name="menu_action_save">Gemme</string>
+    <string name="menu_action_save">Gem</string>
 
     <string name="service_indicator_positive">Kører</string>
     <string name="service_indicator_negative">Kører ikke</string>
@@ -50,7 +50,7 @@
     <string name="text_profile">Profil:</string>
     <string name="text_use_scenario">Brug scenarie</string>
     <string name="text_inline_scenario">Integreret scenarie</string>
-    <string name="text_use_condition">Brug betingelse</string>
+    <string name="text_use_condition">Brug tilstand</string>
     <string name="text_repeatable_desc">Gentagbar når tilfreds</string>
     <string name="text_reverse_desc">Omvendt scenarie</string>
     <string name="text_volatile">Omskiftelig</string>
@@ -62,10 +62,11 @@
     <string name="hint_script_title">skript titel</string>
     <string name="hint_profile_title">profil titel</string>
     <string name="hint_scenario_title">scenarie titel</string>
-    <string name="hint_condition_title">betingelse titel</string>
+    <string name="hint_condition_title">tilstand titel</string>
 
     <string name="prompt_save_failed">Kan ikke gemme</string>
     <string name="prompt_delete">Slette: %s</string>
+    <string name="prompt_delete_failed">Kan ikke slette. Kontrollere om element er i brug.</string>
     <string name="prompt_data_illegal">Forhindre at gemme data med ugyldige felter. Kontrollere valg/inddata.</string>
 
     <string name="prompt_prevented_for_permission">Easer behøver rettighed &lt;%s&gt; for denne funktion.</string>
@@ -112,7 +113,7 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
 
     <string name="pref_cooldown_title">Pausetid</string>
     <string name="pref_cooldown_summary">Mindste interval mellem to udløsere på samme hændelse</string>
-    <string name="cooldown_time_illformed">Værdi skal være i området 0-32767</string>
+    <string name="cooldown_time_illformed">Værdi skal være i område 0-32767</string>
 
     <string name="pref_passive_mode_title">Passiv tilstand</string>
     <string name="pref_passive_mode_summary_on">Lytter til hændelse; ingen kontrol når den er aktiveret</string>
