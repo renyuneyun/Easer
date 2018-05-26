@@ -7,7 +7,7 @@
     <string name="title_event">Hændelse</string>
     <string name="title_script">Skript</string>
     <string name="title_scenario">Scenarie</string>
-    <string name="title_condition">Betingelse</string>
+    <string name="title_condition">Tilstand</string>
     <string name="title_application">Program</string>
     <string name="title_activity_log">Aktivitetslog</string>
     <string name="title_about">Om</string>
@@ -16,7 +16,7 @@
     <string name="title_edit">Redigere</string>
     <string name="title_delete">Slette</string>
     <string name="title_edit_event">Redigere hændelse</string>
-    <string name="title_edit_condition">Redigere betingelse</string>
+    <string name="title_edit_condition">Redigere tilstand</string>
     <string name="title_edit_profile">Redigere profil</string>
     <string name="title_select_operation">Vælge handling</string>
 
@@ -33,8 +33,8 @@
 
     <string name="null_content">NULL INDHOLD</string>
 
-    <string name="navigation_drawer_open">Åbne navigations-skuffe</string>
-    <string name="navigation_drawer_close">Lukke navigations-skuffe</string>
+    <string name="navigation_drawer_open">Åbne navigationsskuffe</string>
+    <string name="navigation_drawer_close">Lukke navigationsskuffe</string>
 
     <string name="button_read_next_time">Læse næste gang</string>
     <string name="button_understand">Forstået</string>
@@ -42,7 +42,7 @@
     <string name="button_ok">O.k.</string>
 
     <string name="text_lack_permission">Easer har IKKE alle nødvendige rettigheder.</string>
-    <string name="button_request_permission">Tillad rettigheder</string>
+    <string name="button_request_permission">Tildele rettigheder</string>
 
     <string name="text_title">Titel:</string>
     <string name="text_parent_node">Forælder</string>
@@ -51,7 +51,7 @@
     <string name="text_use_scenario">Brug scenarie</string>
     <string name="text_inline_scenario">Integreret scenarie</string>
     <string name="text_use_condition">Brug tilstand</string>
-    <string name="text_repeatable_desc">Gentagbar når tilfreds</string>
+    <string name="text_repeatable_desc">Gentagelig når tilfreds</string>
     <string name="text_reverse_desc">Omvendt scenarie</string>
     <string name="text_volatile">Omskiftelig</string>
     <string name="text_persistent">Vedvarende</string>
@@ -98,7 +98,7 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="pref_category_data_manage">Data håndtering</string>
 
     <string name="pref_autostart_title">Autostarte ved opstart</string>
-    <string name="pref_autostart_summary">Starte Easer baggrunds-tjeneste automatisk</string>
+    <string name="pref_autostart_summary">Starte Easer baggrundstjeneste automatisk</string>
 
     <string name="pref_restart_after_upgrade_title">Start tjeneste efter opgradering</string>
 
@@ -109,7 +109,7 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="pref_logging_summary">Gemme log til ekstern opbevaringsenhed (/sdcard/logger) for at hjælpe med fejl rapporter.\nIndstillings ændringer træder i kraft ved næste Easer start.</string>
 
     <string name="pref_use_root_title">Bruge administrator egenskaber</string>
-    <string name="pref_use_root_summary">Bruge administrator rettighed for specielle funktioner (udvidelses-moduler), som kan hjælpe med at løse kompatibilitetsproblem på nogle enheder. Administrator rettighed vil ikke blive brugt andre steder.</string>
+    <string name="pref_use_root_summary">Bruge administrator egenskab for specielle funktioner (udvidelsesmoduler), som kan hjælpe med at løse kompatibilitetsproblem på nogle enheder. Administrator egenskab vil ikke blive brugt andre steder.</string>
 
     <string name="pref_cooldown_title">Pausetid</string>
     <string name="pref_cooldown_summary">Mindste interval mellem to udløsere på samme hændelse</string>
@@ -119,23 +119,23 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="pref_passive_mode_summary_on">Lytter til hændelse; ingen kontrol når den er aktiveret</string>
     <string name="pref_passive_mode_summary_off">Kontrollere tilfredshedstilstand når (hver) hændelse er aktiveret</string>
 
-    <string name="pref_enabled_plugins_title">Aktiverede udvidelses-moduler</string>
-    <string name="pref_enabled_plugins_summary">Aktivere eller deaktivere udvidelses-moduler</string>
+    <string name="pref_enabled_plugins_title">Aktiverede udvidelsesmoduler</string>
+    <string name="pref_enabled_plugins_summary">Aktivere eller deaktivere udvidelsesmoduler</string>
 
     <string name="pref_use_12_hour_clock_title">Brug 12 timers ur</string>
 
-    <string name="pref_export_title">Eksport</string>
-    <string name="pref_export_summary">Eksportere alle hændelser og profiler til sd-kort.\nFiler navngives efter aktuel tid.</string>
+    <string name="pref_export_title">Eksportere</string>
+    <string name="pref_export_summary">Eksportere alle hændelser og profiler til sd-kort.\nFil navngives efter aktuel tid.</string>
     <string name="pref_import_title">Importere</string>
     <string name="pref_import_summary">Importere alle hændelser og profiler i en pakket zip-fil.\nEksisterende hændelser og profiler med samme navn vil blive overskrevet.</string>
 
     <string name="pref_convert_data_title">Konvertere data</string>
-    <string name="pref_convert_data_summary">Konvertere alle data til anbefalet format</string>
+    <string name="pref_convert_data_summary">Konvertere al data til anbefalet format</string>
 
-    <string name="message_plugin_not_compatible">Udvidelses-modul er ikke kompatibel med enhed.</string>
+    <string name="message_plugin_not_compatible">Udvidelsesmodul er ikke kompatibel med enhed.</string>
 
     <string name="message_convert_data_start">Konverterer data.</string>
-    <string name="message_convert_data_finish">Konverteret data.</string>
+    <string name="message_convert_data_finish">Data konverteret.</string>
     <string name="message_convert_data_abort">Konvertere data afbrudt.</string>
     <string name="message_convert_data_error">Fejl opstod ved konvertering. Se i log for detaljer.</string>
 
