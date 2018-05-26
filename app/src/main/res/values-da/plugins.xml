@@ -5,11 +5,13 @@
     <string name="condition_event_enter">Ankomme</string>
     <string name="condition_event_leave">Forlade</string>
 
+    <string name="condition_cell_location">@string/event_celllocation</string>
+
     <string name="event_time">Tidspunkt</string>
     <string name="event_date">Dato</string>
 
     <string name="event_wificonn">Trådløs forbindelse</string>
-    <string name="wificonn_select_dialog_title">Vælge trådløs adgangs-punkt</string>
+    <string name="wificonn_select_dialog_title">Vælge trådløs adgangspunkt</string>
     <string name="wificonn_wait_for_result">Venter på trådløs skanne svar</string>
 
     <string name="event_celllocation">Celle placering</string>
@@ -26,7 +28,7 @@
     <string name="ebtdevice_select_dialog_title">Vælge Bluetooth enhed</string>
     <string name="ebtdevice_unknown_device">Ukendt enhed</string>
 
-    <string name="event_connectivity">Forbindelses-type</string>
+    <string name="event_connectivity">Forbindelsestype</string>
     <array name="connectivity_type">
         <item>Ikke forbundet</item>
         <item>Trådløs</item>
@@ -41,7 +43,7 @@
     <string name="text_calendar_name">Kalender navn</string>
     <string name="text_calendar">Kalender</string>
     <string name="indicator_when">Når…</string>
-    <string name="choice_start_of">Start på</string>
+    <string name="choice_start_of">Start ved</string>
     <string name="choice_end_of">Slut ved</string>
     <string name="choice_any_event">Enhver hændelse</string>
 
@@ -55,10 +57,10 @@
 
     <string name="event_notification">Påmindelse modtaget</string>
     <string name="event_notification__app">Program</string>
-    <string name="event_notification__app_hint">Fuld kvalificeret pakkenavn for programmet</string>
+    <string name="event_notification__app_hint">Fuldt kvalificeret pakkenavn for program</string>
     <string name="event_notification__title">Titel (indeholder…)</string>
     <string name="event_notification__content">Indhold (indeholder…)</string>
-    <string name="label_event_notification_listener_service">Easer (Påmindelse hændelses-lytter)</string>
+    <string name="label_event_notification_listener_service">Påmindelse hændelseslytter</string>
 
     <string name="event_timer">Timer</string>
     <string name="exact_timer">Nøjagtig timer?</string>
@@ -94,13 +96,15 @@
     <string name="ev_screen_text_screen_is">Når skærm er…</string>
     <string name="ev_screen_on">Til</string>
     <string name="ev_screen_off">Fra</string>
+    <string name="ev_screen_unlocked">Låst op</string>
+
 
     <string name="operation_wifi">Trådløs</string>
     <string name="operation_cellular">Mobil data</string>
     <string name="operation_bluetooth">Bluetooth</string>
     <string name="operation_rotation">Automatisk rotere</string>
 
-    <string name="operation_broadcast">Send udsendelse</string>
+    <string name="operation_broadcast">Sende udsendelse</string>
     <string name="obroadcast_l_action">Handling:</string>
     <string name="obroadcast_l_category">Kategori:</string>
     <string name="obroadcast_l_type">Type:</string>
@@ -127,7 +131,7 @@
     <string name="ringer_mode_dnd_none">Ingen</string>
     <string name="ringer_mode_dnd_alarms">Alarmer</string>
     <string name="ringing_items_in_do_not_disturb_mode">Opkaldselementer i forstyrre ikke tilstand</string>
-    <string name="label_operation_ringer_mode_notification_listener_service">Easer (Ændre stille tilstand)</string>
+    <string name="label_operation_ringer_mode_notification_listener_service">Ændre stille tilstand</string>
 
     <string name="operation_command">Udføre kommandoer</string>
     <string name="operation_hotspot">Hotspot</string>
@@ -178,7 +182,7 @@
 
     <string name="op_launch_app">Starte program</string>
     <string name="op_launch_app_text_app">Program</string>
-    <string name="op_launch_app_text_package_name">Pakke navn</string>
+    <string name="op_launch_app_text_package_name">Pakkenavn</string>
 
     <string name="op_ui_mode">Bil tilstand</string>
     <string name="op_car_mode">Bil tilstand</string>
