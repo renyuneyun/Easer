@@ -5,7 +5,19 @@
     <string name="condition_event_enter">Ankomme</string>
     <string name="condition_event_leave">Forlade</string>
 
+
+    <string name="condition_bluetooth_device">Forbundet bluetooth enhed</string>
+
     <string name="condition_cell_location">@string/event_celllocation</string>
+
+    <string name="condition_connectivity">@string/event_connectivity</string>
+
+    <string name="condition_date">@string/event_date</string>
+
+    <string name="condition_day_of_week">@string/event_day_of_week</string>
+
+    <string name="condition_screen">@string/event_screen</string>
+
 
     <string name="event_time">Tidspunkt</string>
     <string name="event_date">Dato</string>
@@ -187,5 +199,7 @@
     <string name="op_ui_mode">Bil tilstand</string>
     <string name="op_car_mode">Bil tilstand</string>
     <string name="op_normal_mode">Normal tilstand</string>
+
+    <string name="rel_after">Efter</string>
 
 </resources>
