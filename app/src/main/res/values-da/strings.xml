@@ -141,7 +141,7 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
 
     <string name="title_welcome_message">Velkommen</string>
     <string name="welcome_message">Velkommen til Easer!
-        \nForhåbentligt kan du bruge programmet :)
+        \nForhåbentligt kan du drage nytte af programmet :)
         \n\nLæs følgende før start:\n
     1. Tillad Easer rettigheder før brug af relevante hændelser og profiler.\n
     2. Forbinde hændelser som <a href="https://en.wikipedia.org/wiki/Tree_structure">træer</a> er for NUVÆRENDE eneste måde at sammensætte hændelser.
@@ -153,5 +153,5 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
     <string name="template_export">Eksporteret til %s</string>
     <string name="version">Version</string>
 
-    <string name="message_importing_invalid_data">Fil ser ikke ud til at være gyldig. Importere en tidligere eksporteret Easer fil.</string>
+    <string name="message_importing_invalid_data">Filen ser ikke ud til at være gyldig. Importere en tidligere eksporteret Easer fil.</string>
 </resources>
