@@ -23,11 +23,11 @@
     <string name="menu_stop">Stop</string>
     <string name="menu_action_save">Gem</string>
 
-    <string name="service_indicator_positive">Kører</string>
-    <string name="service_indicator_negative">Kører ikke</string>
+    <string name="service_indicator_positive">Startet</string>
+    <string name="service_indicator_negative">Stoppet</string>
     <string name="profile_indicator_last">Seneste profil:</string>
     <string name="profile_indicator_profile">Profil</string>
-    <string name="profile_indicator_from">Fra hændelse</string>
+    <string name="profile_indicator_from">Fra</string>
     <string name="profile_indicator_time">Indlæst tidspunkt</string>
 
     <string name="null_content">NULL INDHOLD</string>
@@ -45,13 +45,13 @@
 
     <string name="text_title">Titel:</string>
     <string name="text_parent_node">Forælder</string>
-    <string name="text_parent">Forælder:</string>
-    <string name="text_profile">Profil:</string>
-    <string name="text_predefined_event">Brug scenarie</string>
-    <string name="text_inline_event">Integreret scenarie</string>
+    <string name="text_parent">Forælder</string>
+    <string name="text_profile">Profil</string>
+    <string name="text_predefined_event">Forudbestemt hændelse</string>
+    <string name="text_inline_event">Integreret hændelse</string>
     <string name="text_use_condition">Brug tilstand</string>
     <string name="text_repeatable_desc">Gentagelig når tilfreds</string>
-    <string name="text_reverse_desc">Omvendt scenarie</string>
+    <string name="text_reverse_desc">Omvendt hændelse</string>
     <string name="text_volatile">Omskiftelig</string>
     <string name="text_persistent">Vedvarende</string>
 
@@ -63,7 +63,7 @@
     <string name="hint_condition_title">tilstand titel</string>
 
     <string name="prompt_save_failed">Kan ikke gemme</string>
-    <string name="prompt_delete">Slette: %s</string>
+    <string name="prompt_delete">Slette: %s?</string>
     <string name="prompt_delete_failed">Kan ikke slette. Kontrollere om element er i brug.</string>
     <string name="prompt_data_illegal">Forhindre at gemme data med ugyldige felter. Kontrollere valg/inddata.</string>
 
@@ -100,8 +100,8 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
 
     <string name="pref_restart_after_upgrade_title">Start tjeneste efter opgradering</string>
 
-    <string name="pref_welcome_title">Vise velkommen besked</string>
-    <string name="pref_welcome_summary">Vise velkommen besked ved program opstart</string>
+    <string name="pref_welcome_title">Vise velkomst besked</string>
+    <string name="pref_welcome_summary">Vise velkomst besked ved program opstart</string>
 
     <string name="pref_logging_title">Aktivere ekstern logning</string>
     <string name="pref_logging_summary">Gemme log til ekstern opbevaringsenhed (/sdcard/logger) for at hjælpe med fejl rapporter.\nIndstillings ændringer træder i kraft ved næste Easer start.</string>
