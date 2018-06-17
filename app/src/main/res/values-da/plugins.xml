@@ -16,7 +16,16 @@
 
     <string name="condition_day_of_week">@string/event_day_of_week</string>
 
+    <string name="condition_headset">@string/event_headset</string>
+    <string name="condition_headset__headset_state">Hovedtelefon tilstand</string>
+    <string name="condition_headset__plugged_in">Tilsluttet</string>
+    <string name="condition_headset__plugged_out">Frakoblet</string>
+
     <string name="condition_screen">@string/event_screen</string>
+
+    <string name="condition_time">@string/event_time</string>
+
+    <string name="condition_wifi">@string/event_wificonn</string>
 
 
     <string name="event_time">Tidspunkt</string>
@@ -29,7 +38,7 @@
     <string name="event_celllocation">Celle placering</string>
 
     <string name="event_battery">Batteri status</string>
-    <array name="battery_status">
+   <array name="battery_status">
         <item>Lader</item>
         <item>Aflader</item>
     </array>
