@@ -82,6 +82,9 @@
     <string name="event_notification__title">Titel (indeholder…)</string>
     <string name="event_notification__content">Indhold (indeholder…)</string>
     <string name="label_event_notification_listener_service">Påmindelse hændelseslytter</string>
+    <string name="ev_notification_dynamics_app">Påmindelse sender program</string>
+    <string name="ev_notification_dynamics_title">Påmindelse titel</string>
+    <string name="ev_notification_dynamics_content">Påmindelse indhold</string>
 
     <string name="event_timer">Timer</string>
     <string name="exact_timer">Nøjagtig timer?</string>
