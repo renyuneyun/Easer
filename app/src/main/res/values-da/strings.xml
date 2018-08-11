@@ -30,7 +30,19 @@
     <string name="service_indicator_positive">Kørende</string>
     <string name="service_indicator_negative">Stoppet</string>
 
-    <string name="null_content">NULL INDHOLD</string>
+    <string name="activity_log__profile">@string/title_profile</string>
+    <string name="activity_log__script">@string/title_script</string>
+    <string name="activity_log__time">Tidspunkt</string>
+    <string name="activity_log__extra">Ekstra information</string>
+    <string name="activity_log__satisfaction">Status</string>
+    <string name="activity_log__satisfied">Tilfreds</string>
+    <string name="activity_log__unsatisfied">Ikke tilfreds</string>
+    <string name="activity_log__service">Tjeneste</string>
+    <string name="activity_log__status">Status</string>
+    <string name="activity_log__start">Start</string>
+    <string name="activity_log__stop">Stop</string>
+
+   <string name="null_content">NULL INDHOLD</string>
 
     <string name="navigation_drawer_open">Åbne navigationsskuffe</string>
     <string name="navigation_drawer_close">Lukke navigationsskuffe</string>
@@ -158,6 +170,8 @@ Reminder: Easer is still in development. It may contain bugs and the UI definite
 
     <string name="dynamics_time">Nuværende tidspunkt</string>
     <string name="dynamics_date">Nuværende dato</string>
+    <string name="dynamics_script_name">Skript navn</string>
+    <string name="dynamics_profile_name">Profil navn</string>
 
     <string name="title_help">Hjælp</string>
     <string name="help_script">Skript er logik beholderne. Forbind en hændelse eller en tilstand med en profil i et skript, så Easer indlæser/udfører den pågældende profil når hændelsen finder sted eller tilstandn er opfyldt.\nDer er også mere avancerede funktioner f.eks. omvendt hændelse.\nFor yderligere oplysninger henvises til <a href="https://github.com/renyuneyun/Easer/wiki"> dokumentet</a>.</string>
