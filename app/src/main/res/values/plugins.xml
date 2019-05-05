@@ -183,6 +183,8 @@
     <string name="label_operation_ringer_mode_notification_listener_service">Silent Mode Switcher</string>
 
     <string name="operation_command">Run commands</string>
+    <string name="operation_termux">Run Termux script</string>
+    <string name="operation_termux_button_text">Click to select the script</string>
     <string name="operation_hotspot">Hotspot</string>
     <string name="operation_synchronization">Account synchronization</string>
 

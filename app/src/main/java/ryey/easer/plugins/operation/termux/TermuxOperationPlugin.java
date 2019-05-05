@@ -17,7 +17,7 @@
  * along with Easer.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package ryey.easer.plugins.operation.command;
+package ryey.easer.plugins.operation.termux;
 
 import android.app.Activity;
 import android.content.Context;
@@ -33,17 +33,17 @@ import ryey.easer.plugin.operation.Category;
 import ryey.easer.plugins.operation.OperationLoader;
 import ryey.easer.plugins.reusable.PluginHelper;
 
-public class CommandOperationPlugin implements OperationPlugin<CommandOperationData> {
+public class TermuxOperationPlugin implements OperationPlugin<TermuxOperationData> {
 
     @NonNull
     @Override
     public String id() {
-        return "command";
+        return "termux";
     }
 
     @Override
     public int name() {
-        return R.string.operation_command;
+        return R.string.operation_termux;
     }
 
     @Override
@@ -70,30 +70,37 @@ public class CommandOperationPlugin implements OperationPlugin<CommandOperationD
 
     @Override
     public boolean checkPermissions(@NonNull Context context) {
-        return true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return PluginHelper.checkPermission(context, "com.termux.permission.TERMUX_SERVICE");
+        } else {
+            return true;
+        }
     }
 
     @Override
     public void requestPermissions(@NonNull Activity activity, int requestCode) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            PluginHelper.requestPermission(activity, requestCode, "com.termux.permission.TERMUX_SERVICE");
+        }
     }
 
     @NonNull
     @Override
-    public OperationDataFactory<CommandOperationData> dataFactory() {
-        return new CommandOperationDataFactory();
+    public OperationDataFactory<TermuxOperationData> dataFactory() {
+        return new TermuxOperationDataFactory();
 
     }
 
     @NonNull
     @Override
-    public PluginViewFragmentInterface<CommandOperationData> view() {
-        return new CommandPluginViewFragment();
+    public PluginViewFragmentInterface<TermuxOperationData> view() {
+        return new TermuxPluginViewFragment();
     }
 
     @NonNull
     @Override
-    public OperationLoader<CommandOperationData> loader(@NonNull Context context) {
-        return new CommandLoader(context);
+    public OperationLoader<TermuxOperationData> loader(@NonNull Context context) {
+        return new TermuxLoader(context);
     }
 
 }
