@@ -94,9 +94,9 @@
     <string name="hint_profile_title">Profile title</string>
     <string name="hint_condition_title">Condition title</string>
     <string name="prompt_save_failed">Failed to save</string>
-    <string name="prompt_delete">Are you sure you want to delete %s\?</string>
-    <string name="prompt_delete_failed">Deletion failed. Check if this item is being used.</string>
-    <string name="prompt_data_illegal">Prevented saving data with invalid field(s). Please recheck your choices / inputs.</string>
+    <string name="prompt_delete">Are you sure you want to delete: %s?</string>
+    <string name="prompt_delete_failed">Failed to delete. Check if this item is being used.</string>
+    <string name="prompt_data_illegal">Prevented saving data with invalid field(s). Please check your choices / inputs.</string>
     <string name="prompt_dynamics_not_ready">To set Dynamics, you need to select a valid Profile and a valid trigger (e.g. Event).</string>
     <string name="prompt_prevented_for_permission">Grant Easer &lt;%s&gt; permission for this to work..</string>
     <string name="prompt_error_logged">Easer just recorded an error. See the "error" subdirectory of log directory.</string>
@@ -124,24 +124,26 @@
     <string name="pref_restart_after_upgrade_title">Start service after upgrade</string>
 
     <string name="pref_welcome_title">Show welcome message</string>
+
+  
     <string name="pref_welcome_summary">Show welcome message when opening app</string>
-    <string name="pref_logging_title">Turn on external logging</string>
-    <string name="pref_logging_summary">Logs to external storage devices (/sdcard/logger) to aid bug reports.
+    <string name="pref_logging_title">Enable external logging</string>
+    <string name="pref_logging_summary">Log to external storage device (/sdcard/logger) to aid bug reports.
 \nChanges take effect at next app start.</string>
     <string name="pref_use_root_title">Use root features</string>
     <string name="pref_use_root_summary">Use root permission for specific functions (skills), which may help resolve compatibility issue on some devices. It won\'t be used elsewhere.</string>
     <string name="pref_cooldown_title">Cool down time</string>
-    <string name="pref_cooldown_summary">Minimal interval between two triggers of the same event</string>
-    <string name="cooldown_time_illformed">The number must not be lower than 0 and not too large to fit in a integer</string>
-    <string name="pref_enabled_skills_title">Active skills</string>
-    <string name="pref_enabled_skills_summary">Turn on or off certain skills</string>
+    <string name="pref_cooldown_summary">Minimum interval between two triggers of the same event</string>
+    <string name="cooldown_time_illformed">Must be greater than 0 and smaller than integer maximum</string>
+    <string name="pref_enabled_skills_title">Enabled skills</string>
+    <string name="pref_enabled_skills_summary">Enable or disable certain skills</string>
     <string name="pref_use_12_hour_clock_title">Use 12-hour clock</string>
 
     <string name="pref_export_title">Export</string>
     <string name="pref_export_summary">Export all events and profiles to SD card.
-\nThe filename wil be a current timestamp.</string>
+\nThe filename will be the current timestamp.</string>
     <string name="pref_import_title">Import</string>
-    <string name="pref_import_summary">Import all events and profiles in a ZIP file.
+    <string name="pref_import_summary">Import all events and profiles from a ZIP file.
 \nExisting events and profiles with same name will be replaced.</string>
     <string name="pref_convert_data_title">Convert data</string>
     <string name="pref_convert_data_summary">Convert all data to the recommended format</string>
@@ -149,7 +151,8 @@
     <string name="pref_show_notification_title">Show notification</string>
     <string name="pref_show_notification_summary">Show a notification in the notification bar.</string>
     <string name="pref_foreground_title">Run service in foreground</string>
-    <string name="pref_foreground_summary">Make it harder to for the system to kill the service. A notification will be shown. Can not be turned off on Android 8+ because of a system requirement.</string>
+    <string name="pref_foreground_summary">Make it harder for the system to kill this service. Will show a notification. Cannot be disabled on Android 8+.</string>
+
 
     <string name="pref_locale_custom">Custom locale</string>
 
@@ -209,18 +212,11 @@
 
     <string name="title_help">Help</string>
 
-    <string name="help_script">\\\"Scripts\\\" are the logic containers. Connect an event or a condition with a profile in a script, so that Easer knows to load/execute that profile when the event occurs, or the condition is met.
-\nThere are also more advanced functions, e.g. reversed events.
-\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">document</a> for more info.</string>
-    <string name="help_event">\\\"Events\\\" represent short-time (instant) occurances on your device, or remotely.
-\nFor example, receiving a notification, or an NFC tag is scanned.
-\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">document</a> for more info.</string>
-    <string name="help_condition">\\\"Condition\\\" represents a long-lasting (but usually not forever) condition on your device or remotely.
-\nFor example, upon connection Wi-Fi, or as the screen turns off.
-\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">document</a> for more info.</string>
-    <string name="help_profile">\\\"Profile\\\" is a set of operations. Each operation represents a particular type of action.
-\nFor example, turn on Bluetooth, or send an SMS.
-\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">document</a> for more info.</string>
+    <string name="help_script">A Script holds the logic that determines when a Profile should be loaded/executed. You will connect an Event or a Condition with a Profile in a Script, so that Easer knows to load/execute that Profile when that Event happens or the Condition is met.\nThere are also more advanced functions, e.g. reversed event.\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">documentation</a> for more information.</string>
+    <string name="help_event">An Event represents an instantaneous event such as receiving a notification or scanning an NFC tag.  Scripts can be set to trigger when an Event occurs.\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">documentation</a> for more information.</string>
+    <string name="help_condition">A Condition represents a long-lasting state, such as WiFi status (connected/disconnected) or screen state (on/off).\nWhen a Script is triggered by an event, it can check whether a Condition is satisfied and modify its behavior.\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">documentation</a> for more information.</string>
+    <string name="help_profile">A Profile contains a set of Operations that can be triggered by a Script. Each Operation represents a particular type of action.\nFor example, turn on Bluetooth, or send an SMS.\nPlease refer to the <a href="https://github.com/renyuneyun/Easer/wiki">documentation</a> for more information.</string>
+    
     <string name="category_operation_android">Android</string>
     <string name="category_operation_system_config">System config</string>
     <string name="category_operation_easer">@string/easer</string>
