@@ -147,6 +147,15 @@
     <string name="o_nettrans_remote_port">Remote Port</string>
     <string name="o_nettrans_data">Data</string>
 
+    <string name="operation_http_request">HTTP request</string>
+    <string name="o_http_method">Method</string>
+    <string name="o_http_get">GET</string>
+    <string name="o_http_post">POST</string>
+    <string name="o_http_url">URL</string>
+    <string name="o_http_header">Header (line format: "key: value")</string>
+    <string name="o_http_content_type">Content type</string>
+    <string name="o_http_post_data">Post data</string>
+
     <string name="o_play_media">Play Media</string>
     <string name="o_play_media_text_file">File Path</string>
 

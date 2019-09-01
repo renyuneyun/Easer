@@ -62,6 +62,7 @@ import ryey.easer.skills.operation.broadcast.BroadcastOperationSkill;
 import ryey.easer.skills.operation.cellular.CellularOperationSkill;
 import ryey.easer.skills.operation.command.CommandOperationSkill;
 import ryey.easer.skills.operation.hotspot.HotspotOperationSkill;
+import ryey.easer.skills.operation.http_request.HttpRequestOperationSkill;
 import ryey.easer.skills.operation.launch_app.LaunchAppOperationSkill;
 import ryey.easer.skills.operation.media_control.MediaControlOperationSkill;
 import ryey.easer.skills.operation.network_transmission.NetworkTransmissionOperationSkill;
@@ -146,6 +147,7 @@ final public class LocalSkillRegistry {
         operation().registerSkill(HotspotOperationSkill.class);
         operation().registerSkill(SynchronizationOperationSkill.class);
         operation().registerSkill(NetworkTransmissionOperationSkill.class);
+        operation().registerSkill(HttpRequestOperationSkill.class);
         operation().registerSkill(MediaControlOperationSkill.class);
         operation().registerSkill(AirplaneModeOperationSkill.class);
         operation().registerSkill(SendSmsOperationSkill.class);
