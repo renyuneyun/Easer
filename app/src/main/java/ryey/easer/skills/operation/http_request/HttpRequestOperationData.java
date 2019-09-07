@@ -39,7 +39,7 @@ import ryey.easer.commons.local_skill.dynamics.SolidDynamicsAssignment;
 import ryey.easer.commons.local_skill.operationskill.OperationData;
 import ryey.easer.plugin.PluginDataFormat;
 
-public class HttpRequestOperationData implements OperationData, Serializable {
+public class HttpRequestOperationData implements OperationData {
 
     private static final String K_REQUEST_METHOD = "requestMethod";
     private static final String K_URL = "url";
