@@ -85,7 +85,6 @@ public class HttpRequestOperationSkill implements OperationSkill<HttpRequestOper
     @Override
     public OperationDataFactory<HttpRequestOperationData> dataFactory() {
         return new HttpRequestOperationDataFactory();
-
     }
 
     @NonNull
