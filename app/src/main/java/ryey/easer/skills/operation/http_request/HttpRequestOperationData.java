@@ -152,10 +152,10 @@ public class HttpRequestOperationData implements OperationData, Serializable {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             return Objects.hash(requestMethod, url, requestHeader, contentType, postData);
         } else {
-            return requestHeader.hashCode() * 37 * 37 * 37 * 37
-                    + url.hashCode() * 37 * 37 * 37
-                    + requestHeader.hashCode() * 37 * 37
-                    + contentType.hashCode() * 37
+            return requestHeader.hashCode() * 31 * 31 * 31 * 31
+                    + url.hashCode() * 31 * 31 * 31
+                    + requestHeader.hashCode() * 31 * 31
+                    + contentType.hashCode() * 31
                     + postData.hashCode();
         }
     }
