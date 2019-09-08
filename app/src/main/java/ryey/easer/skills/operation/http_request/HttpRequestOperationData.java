@@ -65,15 +65,15 @@ public class HttpRequestOperationData implements OperationData {
     }
 
     @NonNull
-    RequestMethod requestMethod = RequestMethod.GET;
+    final RequestMethod requestMethod;
     @NonNull
-    String url = "";
+    final String url;
     @NonNull
-    String requestHeader = "";
+    final String requestHeader;
     @NonNull
-    String contentType = "";
+    final String contentType;
     @NonNull
-    String postData = "";
+    final String postData;
 
     HttpRequestOperationData(@NotNull RequestMethod requestMethod, @NotNull String url, @NotNull String requestHeader, @NotNull String contentType, @NotNull String postData) {
         this.requestMethod = requestMethod;
@@ -83,11 +83,7 @@ public class HttpRequestOperationData implements OperationData {
         this.postData = postData;
     }
 
-    HttpRequestOperationData(@NonNull String postData, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
-        parse(postData, format, version);
-    }
-
-    public void parse(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
+    HttpRequestOperationData(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
         switch (format) {
             default:
                 try {
