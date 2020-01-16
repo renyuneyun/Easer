@@ -43,9 +43,9 @@ public class LaunchAppOperationData implements OperationData {
 
     final String app_package; //FIXME: @Nonnull???
     final @Nullable String app_class;
-    final @Nullable Extras extras;
+    final @NonNull Extras extras;
 
-    LaunchAppOperationData(String app_package, @Nullable String app_class, @Nullable Extras extras) {
+    LaunchAppOperationData(String app_package, @Nullable String app_class, @NonNull Extras extras) {
         this.app_package = app_package;
         this.app_class = app_class;
         this.extras = extras;
@@ -75,8 +75,7 @@ public class LaunchAppOperationData implements OperationData {
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.put(K_APP_PACKAGE, app_package);
                     jsonObject.put(K_CLASS, app_class);
-                    if (extras != null)
-                        jsonObject.put(K_EXTRAS, extras.serialize(format));
+                    jsonObject.put(K_EXTRAS, extras.serialize(format));
                     ret = jsonObject.toString();
                 } catch (JSONException e) {
                     throw new IllegalStateException(e);
@@ -102,7 +101,7 @@ public class LaunchAppOperationData implements OperationData {
             return false;
         if (!Utils.nullableEqual(app_class, ((LaunchAppOperationData) obj).app_class))
             return false;
-        if (!Utils.nullableEqual(extras, ((LaunchAppOperationData) obj).extras))
+        if (!extras.equals (((LaunchAppOperationData) obj).extras))
             return false;
         return true;
     }
@@ -133,7 +132,8 @@ public class LaunchAppOperationData implements OperationData {
     private LaunchAppOperationData(Parcel in) {
         app_package = in.readString();
         app_class = in.readString();
-        extras = in.readParcelable(Extras.class.getClassLoader());
+        Extras readedExtras = in.readParcelable(Extras.class.getClassLoader());
+        extras = (readedExtras != null) ? readedExtras : new Extras();
     }
 
     @Nullable

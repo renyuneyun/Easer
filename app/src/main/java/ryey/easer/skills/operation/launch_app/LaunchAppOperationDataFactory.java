@@ -21,10 +21,13 @@ package ryey.easer.skills.operation.launch_app;
 
 import androidx.annotation.NonNull;
 
+import java.util.ArrayList;
+
 import ryey.easer.commons.local_skill.IllegalStorageDataException;
 import ryey.easer.commons.local_skill.ValidData;
 import ryey.easer.commons.local_skill.operationskill.OperationDataFactory;
 import ryey.easer.plugin.PluginDataFormat;
+import ryey.easer.skills.operation.Extras;
 
 class LaunchAppOperationDataFactory implements OperationDataFactory<LaunchAppOperationData> {
     @NonNull
@@ -37,7 +40,7 @@ class LaunchAppOperationDataFactory implements OperationDataFactory<LaunchAppOpe
     @NonNull
     @Override
     public LaunchAppOperationData dummyData() {
-        return new LaunchAppOperationData("com.dummy.app.package", "com.dummy.app.package.Activity1", null);
+        return new LaunchAppOperationData("com.dummy.app.package", "com.dummy.app.package.Activity1", new Extras());
     }
 
     @ValidData

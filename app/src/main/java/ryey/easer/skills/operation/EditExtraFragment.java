@@ -83,7 +83,7 @@ public class EditExtraFragment extends Fragment {
         transaction.commit();
     }
 
-    @Nullable
+    @NonNull
     public Extras getExtras() {
         if (m_fragment_extra.size() > 0) {
             List<ExtraItem> extraItemList = new ArrayList<>(m_fragment_extra.size());
@@ -94,7 +94,7 @@ public class EditExtraFragment extends Fragment {
             }
             return new Extras(extraItemList);
         }
-        return null;
+        return new Extras();
     }
 
     public static class ExtraItemFragment extends Fragment {

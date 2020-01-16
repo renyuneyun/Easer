@@ -49,15 +49,19 @@ public class Extras implements Parcelable {
     private static final String VALUE = "value";
     private static final String V_TYPE = "type";
 
-    @Nullable
+    @NonNull
     public static Extras mayParse(@Nullable String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
         if (data == null)
-            return null;
+            return new Extras();
         return new Extras(data, format, version);
     }
 
     @Nonnull
     public final List<ExtraItem> extras;
+
+    public Extras() {
+        this.extras = new ArrayList<>();
+    }
 
     public Extras(@NonNull List<ExtraItem> extras) {
         this.extras = extras;
@@ -134,9 +138,7 @@ public class Extras implements Parcelable {
             return true;
         if (!(obj instanceof Extras))
             return false;
-        if (!extras.equals(((Extras) obj).extras))
-            return false;
-        return true;
+        return extras.equals(((Extras) obj).extras);
     }
 
     private Extras(Parcel in) {
