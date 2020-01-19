@@ -44,6 +44,8 @@ public class LocationUtils {
     }
 
     static boolean isAcceptable(LocationUSourceData data, Location location) {
+        if (location == null)
+            return false;
         if (location.getAccuracy() > data.thresholdAccuracy)
             return false;
         if ((System.currentTimeMillis() - location.getTime()) > data.thresholdAge * LocationUSourceData.UNIT_THRESHOLD_TIME)
