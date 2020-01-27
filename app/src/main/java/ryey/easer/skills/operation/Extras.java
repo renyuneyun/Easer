@@ -51,7 +51,7 @@ public class Extras implements Parcelable {
 
     @Nullable
     public static Extras mayParse(@Nullable String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
-        if (data == null)
+        if (Utils.isBlank(data))
             return null;
         return new Extras(data, format, version);
     }

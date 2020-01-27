@@ -23,6 +23,9 @@ import android.location.Criteria;
 import android.location.Location;
 
 public class LocationUtils {
+
+    public static final int METERS_PER_DEGREE = 111139;
+
     static Criteria getCriteria() {
         Criteria criteria = new Criteria();
         criteria.setAltitudeRequired(false);
@@ -39,8 +42,7 @@ public class LocationUtils {
 
     static boolean inside(LatLong center, int radius, LatLong point) {
         return Math.sqrt(Math.pow(center.latitude - point.latitude, 2)
-                + Math.pow(center.longitude - point.longitude, 2)
-        ) < radius;
+                + Math.pow(center.longitude - point.longitude, 2) ) * METERS_PER_DEGREE < radius;
     }
 
     static boolean isAcceptable(LocationUSourceData data, Location location) {
