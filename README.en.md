@@ -8,15 +8,15 @@ Easer [![Build Status](https://travis-ci.org/renyuneyun/Easer.svg?branch=master)
 
 Ease your life by automatically performing routine actions.
 
-**Notice**: Due to recent time constraints (since late 2020), Easer's maintainance speed will be affected. But since the main structure and hierarchy is stable, no drastic changes to Easer's *structure* need to be made (but extensions may require some changes of course), except for supporting remote Plugins of Events and Conditions (and supported federated inter-machine automation, as the long-term vision). Interested people can read the relevant sections below to lear how to add the functions you would like to see, or how to locate bugs. PRs will be read whenever there is time, and be merged and release in the usual way -- beta first, and then stable.
+**Notice**: Due to recent time constraints (since late 2020), Easer's maintainance speed will be affected. But since the main structure and hierarchy is stable, no drastic changes to Easer's *structure* need to be made (but extensions may require some changes of course), except for supporting remote Plugins of Events and Conditions (and supported federated inter-machine automation, as the long-term vision). Interested people can read the relevant sections below to learn how to add the functions you would like to see, or how to locate bugs. PRs will be read whenever there is time, and be merged and released in the usual way -- beta first, and then stable.
 
 Introduction
 -----
-Make your smart phone smarter: tell it what to do under different situations. It can handle Events, Conditions, and combine events to new custom complex events.  
+Make your smartphone smarter: tell it what to do in different situations. It can handle Events, Conditions, and combine events to new custom complex events.  
 
-This document centers on development-related things of Easer.
+This document centers on the development-related things of Easer.
 
-If you are looking for the description of Easer's functionality, please refer to [the website](https://renyuneyun.github.io/Easer/en/).
+If you are looking for a description of Easer's functionality, please refer to [the website](https://renyuneyun.github.io/Easer/en/).
 
 Extending Easer
 ------
@@ -24,7 +24,7 @@ Extending Easer
 There are three main topics of adding functions to Easer: *mechanism*, *skills* (used to be called *local plugin)*, and *remote skill* (*plugin*).
 
 *Mechanism* is the core part of Easer, and adding this requires a good understanding of Easer's code; optimization and documenting are also welcome.
-For most cases, what needed is to add new *Event*, *Condition* and *Operation*, which is done by adding *skill* or *remote skill* (*plugin*).
+For most cases, what is needed is to add a new *Event*, *Condition* and *Operation*, which is done by adding *skill* or *remote skill* (*plugin*).
 
 ### Skill
 
@@ -35,7 +35,7 @@ Details are described in [this document](https://renyuneyun.github.io/Easer/en/E
 ### Remote Skill (Plugin)
 
 *Remote Skill* (called *Remote Plugin* previously) is introduced in v0.7, aiming at using standalone applications to extend Easer's functionality.
-Each *remote skill* is a stanalone app; it is in theory also possible to include multiple *remote skills* in one app. Note this feature is rather new and the interface might not be stable yet (though it's unlikely the interface will change much).
+Each *remote skill* is a standalone app; it is in theory also possible to include multiple *remote skills* in one app. Note this feature is rather new and the interface might not be stable yet (though it's unlikely the interface will change much).
 
 Currently, only *Operation* can be extended as *remote skills*. [The *diagram* directory](diagram/) contains some useful information, e.g. [a sequence diagram](diagram/communication.png). [This repo](https://github.com/renyuneyun/EaserOperationPluginExample) is an example implementation of *remote operation plugin*, as well as documents. Better documentations are also welcome.
 
@@ -55,7 +55,7 @@ You can also open an issue if you think there are features that Easer should hav
 You are also welcome to comment on existing issues. If you believe you have the same problem (or idea), you can provide more information about it. Discussion is always welcome.
 Issue expecting ideas are labeled with [RFC](https://github.com/renyuneyun/Easer/issues?q=is%3Aopen+label%3A%22RFC+%2F+Discussion+Wanted%22).
 
-Want to do more but don't know where to start? See issues labeled with GFC (Good For Contributors) [L0](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L0%22), [L1](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L1%22), [L2](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L2%22). These issues usually have clear target and involve few components; the L0, L1 and L2 are my subjective classification of the level of difficulty (ascending).
+Want to do more but don't know where to start? See issues labeled with GFC (Good For Contributors) [L0](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L0%22), [L1](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L1%22), [L2](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L2%22). These issues usually have a clear target and involve few components; the L0, L1 and L2 are my subjective classification of the level of difficulty (ascending).
 
 If you are a developer, you may possess the knowledge and time to solve some issues. You can fork the repo, solve the problem, and create a pull request. Then, your code can be merged, and you can be appreciated by others （and you will be listed in the *Contributors* list unless you don't like to).
 You're also welcome to create pull requests for issues not raised by others, but first, please create an issue describing what you want to do (and that you are going to do it).
@@ -68,7 +68,7 @@ Contribution to test is very much appreciated, especially to the core (including
 
 ### Donation
 
-If you would like to make a donation, please see [DONATE](https://renyuneyun.github.io/Easer/en/DONATE).
+If you would like to donate, please see [DONATE](https://renyuneyun.github.io/Easer/en/DONATE).
 
 Any amount of help is appreciated.
 
@@ -77,7 +77,7 @@ Acknowledgement
 
 ### Contributors and Backers
 
-The development of Easer receives the support and donation from the community. Thank you guys.
+The development of Easer receives support and donation from the community. Thank you, guys.
 
 The [Contributor](Contributor.md) document lists this in more detail.
 
@@ -105,7 +105,7 @@ Tools under `utils/` directory are licensed under Apache 2.0 (See `utils/LICENSE
 ### Why GPL?
 
 The expected functions of Easer require access to personal information (e.g. location, calendar) and networking capabilities. We would never want a tool that is expected to better facilitate our lives to spy on us, so we must prevent that from happening as best as we can. The only way to do this is to allow anyone to inspect every part of Easer, which is to say that Easer (and any derived works) must be made open source.
-Because of the design of Easer, functionality will eventually become modules / plugins. The GPL requires that derived works also be licensed under the GPL, and thus prevents malicious code from sneaking into these parts.
+Because of the design of Easer, functionality will eventually become modules/plugins. The GPL requires that derived works also be licensed under the GPL, and thus prevents malicious code from sneaking into these parts.
 
-In fact, ensuring that derived works / plugins are licensed under the **GPL** is unnecessary -- they only need to be **open source**. However, GPL is the only license (that I know of) which requires that derived works / plugins are open sourced, so it's the only choice.
+In fact, ensuring that derived works/plugins are licensed under the **GPL** is unnecessary -- they only need to be **open source**. However, GPL is the only license (that I know of) which requires that derived works/plugins are open sourced, so it's the only choice.
 
