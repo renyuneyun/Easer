@@ -19,6 +19,8 @@
 
 package ryey.easer.skills.operation.intent;
 
+import static org.junit.Assert.assertEquals;
+
 import android.os.Parcel;
 
 import org.junit.Test;
@@ -27,21 +29,57 @@ import ryey.easer.commons.C;
 import ryey.easer.plugin.PluginDataFormat;
 import ryey.easer.skills.TestHelper;
 
-import static org.junit.Assert.assertEquals;
-
 public class IntentOperationDataTest {
 
     @Test
-    public void testParcel() {
-        IntentOperationData dummyData = new IntentOperationDataFactory().dummyData();
+    public void testParcelActivity() {
+        IntentOperationData dummyData = new ActivityOperationDataFactory().dummyData();
         Parcel parcel = TestHelper.writeToParcel(dummyData);
         IntentOperationData parceledData = IntentOperationData.CREATOR.createFromParcel(parcel);
         assertEquals(dummyData, parceledData);
     }
 
     @Test
-    public void testSerialize() throws Exception {
-        IntentOperationDataFactory factory = new IntentOperationDataFactory();
+    public void testSerializeActivity() throws Exception {
+        ActivityOperationDataFactory factory = new ActivityOperationDataFactory();
+        IntentOperationData dummyData = factory.dummyData();
+        for (PluginDataFormat format : PluginDataFormat.values()) {
+            String serialized_data = dummyData.serialize(format);
+            IntentOperationData parsed_data = factory.parse(serialized_data, format, C.VERSION_CURRENT);
+            assertEquals(dummyData, parsed_data);
+        }
+    }
+
+    @Test
+    public void testParcelBroadcast() {
+        IntentOperationData dummyData = new BroadcastOperationDataFactory().dummyData();
+        Parcel parcel = TestHelper.writeToParcel(dummyData);
+        IntentOperationData parceledData = IntentOperationData.CREATOR.createFromParcel(parcel);
+        assertEquals(dummyData, parceledData);
+    }
+
+    @Test
+    public void testSerializeBroadcast() throws Exception {
+        BroadcastOperationDataFactory factory = new BroadcastOperationDataFactory();
+        IntentOperationData dummyData = factory.dummyData();
+        for (PluginDataFormat format : PluginDataFormat.values()) {
+            String serialized_data = dummyData.serialize(format);
+            IntentOperationData parsed_data = factory.parse(serialized_data, format, C.VERSION_CURRENT);
+            assertEquals(dummyData, parsed_data);
+        }
+    }
+
+    @Test
+    public void testParcelService() {
+        IntentOperationData dummyData = new ServiceOperationDataFactory().dummyData();
+        Parcel parcel = TestHelper.writeToParcel(dummyData);
+        IntentOperationData parceledData = IntentOperationData.CREATOR.createFromParcel(parcel);
+        assertEquals(dummyData, parceledData);
+    }
+
+    @Test
+    public void testSerializeService() throws Exception {
+        ServiceOperationDataFactory factory = new ServiceOperationDataFactory();
         IntentOperationData dummyData = factory.dummyData();
         for (PluginDataFormat format : PluginDataFormat.values()) {
             String serialized_data = dummyData.serialize(format);

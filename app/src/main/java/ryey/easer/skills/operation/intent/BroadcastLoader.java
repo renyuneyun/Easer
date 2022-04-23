@@ -17,24 +17,21 @@
  * along with Easer.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package ryey.easer.skills.operation.intent.operations;
+package ryey.easer.skills.operation.intent;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
 import ryey.easer.commons.local_skill.ValidData;
-import ryey.easer.skills.operation.intent.IntentLoader;
-import ryey.easer.skills.operation.intent.IntentOperationData;
 
-public class BroadcastLoader extends IntentLoader<IntentOperationData> {
+public class BroadcastLoader extends IntentLoader<BroadcastOperationData> {
     public BroadcastLoader(Context context) {
         super(context);
     }
 
     @Override
-    public void _load(@ValidData @NonNull IntentOperationData data, @NonNull OnResultCallback callback) {
-
+    public void _load(@ValidData @NonNull BroadcastOperationData data, @NonNull OnResultCallback callback) {
         context.sendBroadcast(this.getIntent(data));
         callback.onResult(true);
     }

@@ -36,7 +36,7 @@ import ryey.easer.commons.local_skill.ValidData;
 import ryey.easer.skills.SkillViewFragment;
 import ryey.easer.skills.reusable.EditExtraFragment;
 
-public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationData> {
+public abstract class IntentSkillViewFragment<T extends IntentOperationData> extends SkillViewFragment<T> {
     private EditText m_text_action;
     private EditText m_text_category;
     private EditText m_text_type;
@@ -57,7 +57,7 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
     }
 
     @Override
-    protected void _fill(@ValidData @NonNull IntentOperationData data) {
+    protected void _fill(@ValidData @NonNull T data) {
         IntentData rdata = data.data;
         m_text_action.setText(rdata.action);
         m_text_category.setText(Utils.StringCollectionToString(rdata.category, false));
@@ -70,15 +70,15 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
     @ValidData
     @NonNull
     @Override
-    public IntentOperationData getData() throws InvalidDataInputException {
+    public abstract T getData() throws InvalidDataInputException;
+
+    protected IntentData getIntentData() {
         IntentData data = new IntentData();
         data.action = m_text_action.getText().toString();
         data.category = Utils.stringToStringList(m_text_category.getText().toString());
         data.type = m_text_type.getText().toString();
         data.data = Uri.parse(m_text_data.getText().toString());
         data.extras = editExtraFragment.getExtras();
-        IntentOperationData broadcastOperationData = new IntentOperationData(data);
-        return broadcastOperationData;
+        return data;
     }
-
 }

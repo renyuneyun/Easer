@@ -33,13 +33,13 @@ public class IntentOperationData implements OperationData {
     private static final String DATA = "data";
     private static final String EXTRAS = "extras";
 
-    IntentData data = new IntentData();
+    protected IntentData data = new IntentData();
 
-    IntentOperationData(IntentData data) {
+    protected IntentOperationData(IntentData data) {
         this.data = data;
     }
 
-    IntentOperationData(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
+    protected IntentOperationData(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
         parse(data, format, version);
     }
 

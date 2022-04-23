@@ -32,9 +32,7 @@ import ryey.easer.commons.local_skill.operationskill.PrivilegeUsage;
 import ryey.easer.plugin.operation.Category;
 
 
-public abstract class IntentOperationSkill implements OperationSkill<IntentOperationData> {
-
-
+public abstract class IntentOperationSkill<T extends IntentOperationData> implements OperationSkill<T> {
 
     @Override
     public boolean isCompatible(@NonNull final Context context) {
@@ -66,21 +64,15 @@ public abstract class IntentOperationSkill implements OperationSkill<IntentOpera
 
     @Override
     public void requestPermissions(@NonNull Activity activity, int requestCode) {
-
     }
 
     @NonNull
     @Override
-    public OperationDataFactory<IntentOperationData> dataFactory() {
-        return new IntentOperationDataFactory();
-
-    }
+    public abstract OperationDataFactory<T> dataFactory();
 
     @NonNull
     @Override
-    public SkillView<IntentOperationData> view() {
-        return new IntentSkillViewFragment();
-    }
+    public abstract SkillView<T> view();
 
 
 }
