@@ -229,6 +229,11 @@
     <string name="usource__enabled_yes">Yes</string>
     <string name="usource__enabled_no">No</string>
 
+    <string name="usource_airplane_mode">Airplane Mode</string>
+    <string name="usource_airplane_mode__off">Off</string>
+    <string name="usource_airplane_mode__on">On</string>
+    <string name="usource_airplane_mode__state">Airplane Mode state</string>
+
     <string name="usource_battery_level">Battery Level</string>
     <string name="usource_battery_level__level_system">System level</string>
     <string name="usource_battery_level__level_custom">Custom level</string>

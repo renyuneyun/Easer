@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016 - 2019 Rui Zhao <renyuneyun@gmail.com>
+ * Copyright (c) 2016 - 2022 Rui Zhao <renyuneyun@gmail.com>
  *
  * This file is part of Easer.
  *
@@ -81,6 +81,7 @@ import ryey.easer.skills.operation.ui_mode.UiModeOperationSkill;
 import ryey.easer.skills.operation.volume.VolumeOperationSkill;
 import ryey.easer.skills.operation.wifi.WifiOperationSkill;
 import ryey.easer.skills.operation.wireguard.WireguardOperationSkill;
+import ryey.easer.skills.usource.airplane_mode.AirplaneModeUSourceSkill;
 import ryey.easer.skills.usource.battery_level.BatteryLevelUSourceSkill;
 import ryey.easer.skills.usource.bluetooth_device.BTDeviceUSourceSkill;
 import ryey.easer.skills.usource.bluetooth_enabled.BluetoothEnabledUSourceSkill;
@@ -121,6 +122,7 @@ final public class LocalSkillRegistry {
 
     {
         for (USourceSkill skill : new USourceSkill[] {
+                new AirplaneModeUSourceSkill(),
                 new BatteryLevelUSourceSkill(),
                 new BTDeviceUSourceSkill(),
                 new BluetoothEnabledUSourceSkill(),
