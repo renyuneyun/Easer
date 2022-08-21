@@ -285,6 +285,13 @@
 
     <string name="usource_day_of_week">Day of the Week</string>
 
+    <string name="usource_do_not_disturb">Do Not Disturb</string>
+    <string name="usource_do_not_disturb__alarms">Alarms Only</string>
+    <string name="usource_do_not_disturb__none">No Interruptions</string>
+    <string name="usource_do_not_disturb__priority">Priority</string>
+    <string name="usource_do_not_disturb__normal">Normal</string>
+    <string name="usource_do_not_disturb__unknown">Unknown</string>
+
     <string name="usource_headset">Headset</string>
     <string name="usource_headset__headset_state">Headset state</string>
     <string name="usource_headset__plugged_in">Plugged in</string>

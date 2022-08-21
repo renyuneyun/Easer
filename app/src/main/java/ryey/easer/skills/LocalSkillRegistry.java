@@ -90,6 +90,7 @@ import ryey.easer.skills.usource.cell_location.CellLocationUSourceSkill;
 import ryey.easer.skills.usource.connectivity.ConnectivityUSourceSkill;
 import ryey.easer.skills.usource.date.DateUSourceSkill;
 import ryey.easer.skills.usource.day_of_week.DayOfWeekEventSkill;
+import ryey.easer.skills.usource.do_not_disturb.DoNotDisturbUSourceSkill;
 import ryey.easer.skills.usource.headset.HeadsetUSourceSkill;
 import ryey.easer.skills.usource.location.LocationUSourceSkill;
 import ryey.easer.skills.usource.power.PowerUSourceSkill;
@@ -130,6 +131,7 @@ final public class LocalSkillRegistry {
                 new ConnectivityUSourceSkill(),
                 new DateUSourceSkill(),
                 new DayOfWeekEventSkill(),
+                new DoNotDisturbUSourceSkill(),
                 new HeadsetUSourceSkill(),
                 new LocationUSourceSkill(),
                 new PowerUSourceSkill(),

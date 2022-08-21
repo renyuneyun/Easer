@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.apmem.tools.layouts.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/plugin__do_not_disturb_container" >
+
+    <CheckBox
+        android:id="@+id/cbAlarmsOnly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usource_do_not_disturb__alarms" />
+
+    <CheckBox
+        android:id="@+id/cbNoInterruptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usource_do_not_disturb__none" />
+
+    <CheckBox
+        android:id="@+id/cbPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usource_do_not_disturb__priority" />
+
+    <CheckBox
+        android:id="@+id/cbNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usource_do_not_disturb__normal" />
+
+    <CheckBox
+        android:id="@+id/cbUnknown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/usource_do_not_disturb__unknown" />
+</org.apmem.tools.layouts.FlowLayout>
