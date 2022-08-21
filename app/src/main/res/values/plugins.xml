@@ -116,6 +116,7 @@
     <string name="operation_start_service">Start Service</string>
     <string name="obroadcast_l_action">Action:</string>
     <string name="obroadcast_l_category">Category:</string>
+    <string name="obroadcast_l_component">Component:</string>
     <string name="obroadcast_l_type">Type:</string>
     <string name="obroadcast_l_data">Data:</string>
     <string name="text_extras">Extras</string>

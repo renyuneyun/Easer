@@ -57,6 +57,31 @@
 
 
     <TextView
+        android:id="@+id/textView19"
+        style="@style/AppTheme.LR.Input.Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/obroadcast_l_component"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_category" />
+
+    <EditText
+        android:id="@+id/text_component"
+        style="@style/AppTheme.LR.Input.Right"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textMultiLine|textNoSuggestions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+
+    <TextView
         android:id="@+id/textView16"
         style="@style/AppTheme.LR.Input.Left"
         android:layout_width="wrap_content"
@@ -66,7 +91,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/obroadcast_l_type"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_category" />
+        app:layout_constraintTop_toBottomOf="@+id/text_component" />
 
     <EditText
         android:id="@+id/text_type"

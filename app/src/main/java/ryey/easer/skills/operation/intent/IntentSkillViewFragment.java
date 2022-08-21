@@ -43,6 +43,7 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
 
     private EditText m_text_action;
     private EditText m_text_category;
+    private EditText m_text_component;
     private EditText m_text_type;
     private EditText m_text_data;
     private EditExtraFragment editExtraFragment;
@@ -53,6 +54,7 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
         View view = inflater.inflate(R.layout.skill_operation__broadcast, container, false);
         m_text_action = view.findViewById(R.id.text_action);
         m_text_category = view.findViewById(R.id.text_category);
+        m_text_component = view.findViewById(R.id.text_component);
         m_text_type = view.findViewById(R.id.text_type);
         m_text_data = view.findViewById(R.id.text_data);
         editExtraFragment = (EditExtraFragment) getChildFragmentManager().findFragmentById(R.id.fragment_edit_extra);
@@ -65,6 +67,7 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
         IntentData rdata = data.data;
         m_text_action.setText(rdata.action);
         m_text_category.setText(Utils.StringCollectionToString(rdata.category, false));
+        m_text_component.setText(rdata.component);
         m_text_type.setText(rdata.type);
         if (rdata.data != null)
             m_text_data.setText(rdata.data.toString());
@@ -78,6 +81,7 @@ public class IntentSkillViewFragment extends SkillViewFragment<IntentOperationDa
         IntentData data = new IntentData();
         data.action = m_text_action.getText().toString();
         data.category = Utils.stringToStringList(m_text_category.getText().toString());
+        data.component = m_text_component.getText().toString();
         data.type = m_text_type.getText().toString();
         data.data = Uri.parse(m_text_data.getText().toString());
         data.extras = editExtraFragment.getExtras();

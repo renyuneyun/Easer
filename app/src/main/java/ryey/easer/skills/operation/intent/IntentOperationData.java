@@ -31,6 +31,7 @@ public class IntentOperationData implements OperationData, Reused {
 
     private static final String ACTION = "action";
     private static final String CATEGORY = "category";
+    private static final String COMPONENT = "component";
     private static final String TYPE = "type";
     private static final String DATA = "data";
     private static final String EXTRAS = "extras";
@@ -62,6 +63,8 @@ public class IntentOperationData implements OperationData, Reused {
                             intentData.category.add(jsonArray.getString(i));
                         }
                     }
+
+                    intentData.component = jsonObject.optString(COMPONENT, null);
 
                     intentData.type = jsonObject.optString(TYPE, null);
 
@@ -98,6 +101,10 @@ public class IntentOperationData implements OperationData, Reused {
                             jsonArray_category.put(category);
                         }
                         jsonObject.put(CATEGORY, jsonArray_category);
+                    }
+
+                    if (data.component != null) {
+                        jsonObject.put(COMPONENT, data.component);
                     }
 
                     if (!Utils.isBlank(data.type))
@@ -181,6 +188,8 @@ public class IntentOperationData implements OperationData, Reused {
             for (String category : data.category)
                 placeholders.addAll(Utils.extractPlaceholder(category));
         }
+        if (data.component != null)
+            placeholders.addAll(Utils.extractPlaceholder(data.component));
         if (data.type != null)
             placeholders.addAll(Utils.extractPlaceholder(data.type));
         if (data.data != null)
@@ -205,6 +214,8 @@ public class IntentOperationData implements OperationData, Reused {
             for (String category : data.category)
                 intentData.category.add(Utils.applyDynamics(category, dynamicsAssignment));
         }
+        if (data.component != null)
+            intentData.component = Utils.applyDynamics(data.component, dynamicsAssignment);
         if (data.type != null)
             intentData.type = Utils.applyDynamics(data.type, dynamicsAssignment);
         if (data.data != null)
@@ -217,7 +228,7 @@ public class IntentOperationData implements OperationData, Reused {
                 String type = extra.type;
                 extras.add(new ExtraItem(key, value, type));
             }
-            data.extras = Extras.mayConstruct(extras);
+            intentData.extras = Extras.mayConstruct(extras);
         }
         IntentOperationData ret = new IntentOperationData(intentData);
         ret.setSkillID(skillID());

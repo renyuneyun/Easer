@@ -51,6 +51,7 @@ class IntentOperationDataFactory implements OperationDataFactory<IntentOperation
         intentData.action = "testAction";
         intentData.category = new ArrayList<>();
         intentData.category.add("testCategory");
+        intentData.component = "testPackage";
         intentData.type = "myType";
         intentData.data = Uri.parse("myprot://seg1/seg2");
         ArrayList<ExtraItem> extras = new ArrayList<>();

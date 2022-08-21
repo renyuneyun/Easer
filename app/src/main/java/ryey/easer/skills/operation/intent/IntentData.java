@@ -37,6 +37,7 @@ public class IntentData implements Parcelable {
 
     String action;
     List<String> category;
+    String component;
     String type;
     Uri data;
     @Nullable
@@ -56,6 +57,8 @@ public class IntentData implements Parcelable {
             return false;
         if (!Utils.nullableEqual(category, ((IntentData) obj).category))
             return false;
+        if (!Utils.nullableEqual(component, ((IntentData) obj).component))
+            return false;
         if (!Utils.nullableEqual(type, ((IntentData) obj).type))
             return false;
         if (!Utils.nullableEqual(data, ((IntentData) obj).data))
@@ -68,7 +71,7 @@ public class IntentData implements Parcelable {
     @NonNull
     @Override
     public String toString() {
-        return String.format("action:%s category:%s type:%s data:%s", action, category, type, data);
+        return String.format("action:%s category:%s component: %s type:%s data:%s", action, category, component, type, data);
     }
 
     @Override
@@ -80,6 +83,7 @@ public class IntentData implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(action);
         dest.writeStringList(category);
+        dest.writeString(component);
         dest.writeString(type);
         dest.writeParcelable(data, 0);
         dest.writeParcelable(extras, 0);
@@ -102,6 +106,7 @@ public class IntentData implements Parcelable {
         in.readStringList(cat);
         if (cat.size() > 0)
             category = cat;
+        component = in.readString();
         type = in.readString();
         data = in.readParcelable(Uri.class.getClassLoader());
         extras = in.readParcelable(Extras.class.getClassLoader());
