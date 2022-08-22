@@ -55,7 +55,8 @@ public class AirplaneModeTracker extends SkeletonTracker<AirplaneModeUSourceData
     @Override
     public void start() {
         context.registerReceiver(broadcastReceiver, intentFilter);
-        updateTrackerMode((Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0));
+        curMode = (Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0);
+        newSatisfiedState(condition.match(curMode));
     }
 
     @Override
