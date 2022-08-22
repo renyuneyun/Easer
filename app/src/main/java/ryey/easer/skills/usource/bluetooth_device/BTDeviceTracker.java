@@ -20,6 +20,7 @@
 package ryey.easer.skills.usource.bluetooth_device;
 
 import android.app.PendingIntent;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
@@ -52,6 +53,11 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
                     matched_devices--;
                     determine_satisfied();
                 }
+            } else if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+                if (intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, 0) == BluetoothAdapter.STATE_OFF) {
+                    matched_devices = 0;
+                    determine_satisfied();
+                }
             }
         }
     };
@@ -62,12 +68,18 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
         filter = new IntentFilter();
         filter.addAction(BluetoothDevice.ACTION_ACL_CONNECTED);
         filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+        filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
     }
 
     BTDeviceTracker(Context context, BTDeviceUSourceData data,
                     @NonNull PendingIntent event_positive,
                     @NonNull PendingIntent event_negative) {
         super(context, data, event_positive, event_negative);
+    }
+
+    @Override
+    public void start() {
+        context.registerReceiver(connReceiver, filter);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR2) {
             BluetoothManager bluetoothManager = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);
             for (int profile : new int[]{BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER}) {
@@ -82,13 +94,9 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
     }
 
     @Override
-    public void start() {
-        context.registerReceiver(connReceiver, filter);
-    }
-
-    @Override
     public void stop() {
         context.unregisterReceiver(connReceiver);
+        matched_devices = 0;
     }
 
     private boolean is_target(BluetoothDevice device) {
@@ -96,6 +104,7 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
     }
 
     private void determine_satisfied() {
+        if (matched_devices < 0) matched_devices = 0;
         newSatisfiedState(matched_devices > 0);
     }
 }
