@@ -31,6 +31,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
 import ryey.easer.R;
 import ryey.easer.commons.local_skill.InvalidDataInputException;
 import ryey.easer.commons.local_skill.ValidData;
@@ -39,26 +44,26 @@ import ryey.easer.skills.SkillViewFragment;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class DoNotDisturbSkillViewFragment extends SkillViewFragment<DoNotDisturbUSourceData> {
 
-    CheckBox[] doNotDisturbCBs = new CheckBox[DoNotDisturbUSourceData.doNotDisturbIDs.length];
+    HashMap<Integer, CheckBox> doNotDisturbCBs = new HashMap<>();
 
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.skill_usource__do_not_disturb, container, false);
 
-        doNotDisturbCBs[NotificationManager.INTERRUPTION_FILTER_UNKNOWN] = view.findViewById(R.id.cbUnknown);
-        doNotDisturbCBs[NotificationManager.INTERRUPTION_FILTER_ALL] = view.findViewById(R.id.cbNormal);
-        doNotDisturbCBs[NotificationManager.INTERRUPTION_FILTER_PRIORITY] = view.findViewById(R.id.cbPriority);
-        doNotDisturbCBs[NotificationManager.INTERRUPTION_FILTER_NONE] = view.findViewById(R.id.cbNoInterruptions);
-        doNotDisturbCBs[NotificationManager.INTERRUPTION_FILTER_ALARMS] = view.findViewById(R.id.cbAlarmsOnly);
+        doNotDisturbCBs.put(NotificationManager.INTERRUPTION_FILTER_UNKNOWN, view.findViewById(R.id.cbUnknown));
+        doNotDisturbCBs.put(NotificationManager.INTERRUPTION_FILTER_ALL, view.findViewById(R.id.cbNormal));
+        doNotDisturbCBs.put(NotificationManager.INTERRUPTION_FILTER_PRIORITY, view.findViewById(R.id.cbPriority));
+        doNotDisturbCBs.put(NotificationManager.INTERRUPTION_FILTER_NONE, view.findViewById(R.id.cbNoInterruptions));
+        doNotDisturbCBs.put(NotificationManager.INTERRUPTION_FILTER_ALARMS, view.findViewById(R.id.cbAlarmsOnly));
 
         return view;
     }
 
     @Override
     protected void _fill(@ValidData @NonNull DoNotDisturbUSourceData data) {
-        for (int i : DoNotDisturbUSourceData.doNotDisturbIDs) {
-            doNotDisturbCBs[i].setChecked(data.doNotDisturbModes[i]);
+        for (int i : doNotDisturbCBs.keySet()) {
+            doNotDisturbCBs.get(i).setChecked(data.doNotDisturbModes.contains(i));
         }
     }
 
@@ -66,9 +71,9 @@ public class DoNotDisturbSkillViewFragment extends SkillViewFragment<DoNotDistur
     @NonNull
     @Override
     public DoNotDisturbUSourceData getData() throws InvalidDataInputException {
-        boolean[] modes = new boolean[DoNotDisturbUSourceData.doNotDisturbIDs.length];
-        for (int i : DoNotDisturbUSourceData.doNotDisturbIDs) {
-            modes[i] = doNotDisturbCBs[i].isChecked();
+        Set<Integer> modes = new HashSet<>();
+        for (int i : doNotDisturbCBs.keySet()) {
+            if (doNotDisturbCBs.get(i).isChecked()) modes.add(i);
         }
         return new DoNotDisturbUSourceData(modes);
     }

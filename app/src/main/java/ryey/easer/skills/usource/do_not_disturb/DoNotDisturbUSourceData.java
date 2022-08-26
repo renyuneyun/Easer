@@ -34,6 +34,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import ryey.easer.commons.local_skill.IllegalStorageDataException;
 import ryey.easer.commons.local_skill.dynamics.Dynamics;
@@ -43,25 +45,16 @@ import ryey.easer.plugin.PluginDataFormat;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class DoNotDisturbUSourceData implements USourceData {
 
-    static int[] doNotDisturbIDs = {
-            NotificationManager.INTERRUPTION_FILTER_UNKNOWN,
-            NotificationManager.INTERRUPTION_FILTER_ALL,
-            NotificationManager.INTERRUPTION_FILTER_PRIORITY,
-            NotificationManager.INTERRUPTION_FILTER_NONE,
-            NotificationManager.INTERRUPTION_FILTER_ALARMS,
-    };
-    boolean[] doNotDisturbModes = new boolean[doNotDisturbIDs.length];
+    Set<Integer> doNotDisturbModes = new HashSet<>();
 
-    private static final String T_doNotDisturb = "doNotDisturb";
+    private static final String K_MODE = "mode";
 
     DoNotDisturbUSourceData(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
         try {
             JSONObject jsonObject = new JSONObject(data);
-            JSONArray modes = jsonObject.optJSONArray(T_doNotDisturb);
-            if (modes != null) {
-                for (int i = 0; i < doNotDisturbIDs.length; i++) {
-                    this.doNotDisturbModes[doNotDisturbIDs[i]] = (modes.getInt(i + doNotDisturbIDs.length) == 1);
-                }
+            JSONArray modes = jsonObject.getJSONArray(K_MODE);
+            for (int i = 0; i < modes.length(); i++) {
+                doNotDisturbModes.add(modes.getInt(i));
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -69,7 +62,7 @@ public class DoNotDisturbUSourceData implements USourceData {
         }
     }
 
-    DoNotDisturbUSourceData(boolean[] doNotDisturbModes) {
+    DoNotDisturbUSourceData(Set<Integer> doNotDisturbModes) {
         this.doNotDisturbModes = doNotDisturbModes;
     }
 
@@ -79,11 +72,10 @@ public class DoNotDisturbUSourceData implements USourceData {
         JSONObject jsonObject = new JSONObject();
         try {
             JSONArray modes = new JSONArray();
-            for (int i = 0; i < doNotDisturbIDs.length; i++) {
-                modes.put(i, doNotDisturbIDs[i]);
-                modes.put(i + doNotDisturbIDs.length, (this.doNotDisturbModes[doNotDisturbIDs[i]] ? 1 : 0));
+            for (int mode : doNotDisturbModes) {
+                modes.put(mode);
             }
-            jsonObject.put(T_doNotDisturb, modes);
+            jsonObject.put(K_MODE, modes);
         } catch (JSONException e) {
             Logger.e(e, "Error putting %s data", getClass().getSimpleName());
             e.printStackTrace();
@@ -102,11 +94,7 @@ public class DoNotDisturbUSourceData implements USourceData {
             return true;
         if (!(obj instanceof DoNotDisturbUSourceData))
             return false;
-        return Arrays.equals(((DoNotDisturbUSourceData) obj).doNotDisturbModes, doNotDisturbModes);
-    }
-
-    public boolean match(int doNotDisturbMode) {
-        return this.doNotDisturbModes[doNotDisturbMode];
+        return doNotDisturbModes.equals(((DoNotDisturbUSourceData) obj).doNotDisturbModes);
     }
 
     @Nullable
@@ -120,9 +108,11 @@ public class DoNotDisturbUSourceData implements USourceData {
         return 0;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeValue(doNotDisturbModes);
+        dest.writeInt(doNotDisturbModes.size());
+        dest.writeIntArray(doNotDisturbModes.stream().mapToInt(Integer::intValue).toArray());
     }
 
     public static final Creator<DoNotDisturbUSourceData> CREATOR
@@ -137,6 +127,10 @@ public class DoNotDisturbUSourceData implements USourceData {
     };
 
     private DoNotDisturbUSourceData(Parcel in) {
-        this.doNotDisturbModes = (boolean[]) in.readValue(null);
+        int[] values = new int[in.readInt()];
+        in.readIntArray(values);
+        for (int value : values) {
+            doNotDisturbModes.add(value);
+        }
     }
 }

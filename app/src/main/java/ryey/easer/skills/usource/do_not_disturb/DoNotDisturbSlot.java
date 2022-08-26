@@ -40,7 +40,7 @@ public class DoNotDisturbSlot extends AbstractSlot<DoNotDisturbUSourceData> {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED.equals(intent.getAction())) {
-                changeSatisfiedState(eventData.doNotDisturbModes[nm.getCurrentInterruptionFilter()]);
+                changeSatisfiedState(eventData.doNotDisturbModes.contains(nm.getCurrentInterruptionFilter()));
             }
         }
     };

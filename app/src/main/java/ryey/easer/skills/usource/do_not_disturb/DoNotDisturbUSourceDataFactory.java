@@ -19,7 +19,12 @@
 
 package ryey.easer.skills.usource.do_not_disturb;
 
+import android.app.NotificationManager;
+
 import androidx.annotation.NonNull;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import ryey.easer.commons.local_skill.IllegalStorageDataException;
 import ryey.easer.commons.local_skill.ValidData;
@@ -37,7 +42,11 @@ class DoNotDisturbUSourceDataFactory implements USourceDataFactory<DoNotDisturbU
     @NonNull
     @Override
     public DoNotDisturbUSourceData dummyData() {
-        return new DoNotDisturbUSourceData(new boolean[] {false, false, false, false, false});
+        Set<Integer> data = new HashSet<>();
+        data.add(NotificationManager.INTERRUPTION_FILTER_PRIORITY);
+        data.add(NotificationManager.INTERRUPTION_FILTER_NONE);
+        data.add(NotificationManager.INTERRUPTION_FILTER_ALARMS);
+        return new DoNotDisturbUSourceData(data);
     }
 
     @ValidData

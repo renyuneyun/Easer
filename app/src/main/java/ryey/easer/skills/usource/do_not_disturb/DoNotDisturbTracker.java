@@ -35,15 +35,13 @@ import ryey.easer.skills.condition.SkeletonTracker;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class DoNotDisturbTracker extends SkeletonTracker<DoNotDisturbUSourceData> {
 
-    private final DoNotDisturbUSourceData condition;
-    private int curMode;
     private final NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
     private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED.equals(intent.getAction())) {
-                updateTrackerMode(nm.getCurrentInterruptionFilter());
+                newSatisfiedState(data.doNotDisturbModes.contains(nm.getCurrentInterruptionFilter()));
             }
         }
     };
@@ -53,24 +51,16 @@ public class DoNotDisturbTracker extends SkeletonTracker<DoNotDisturbUSourceData
                         @NonNull PendingIntent event_positive,
                         @NonNull PendingIntent event_negative) {
         super(context, data, event_positive, event_negative);
-        this.condition = data;
+        newSatisfiedState(data.doNotDisturbModes.contains(nm.getCurrentInterruptionFilter()));
     }
 
     @Override
     public void start() {
         context.registerReceiver(broadcastReceiver, intentFilter);
-        updateTrackerMode(nm.getCurrentInterruptionFilter());
     }
 
     @Override
     public void stop() {
         context.unregisterReceiver(broadcastReceiver);
-    }
-
-    private void updateTrackerMode(int newMode) {
-        if (curMode == newMode)
-            return;
-        curMode = newMode;
-        newSatisfiedState(condition.match(curMode));
     }
 }
