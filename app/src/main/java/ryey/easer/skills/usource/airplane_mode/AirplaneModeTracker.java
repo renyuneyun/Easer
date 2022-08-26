@@ -46,13 +46,13 @@ public class AirplaneModeTracker extends SkeletonTracker<AirplaneModeUSourceData
                         @NonNull PendingIntent event_positive,
                         @NonNull PendingIntent event_negative) {
         super(context, data, event_positive, event_negative);
+        boolean curMode = (Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0);
+        newSatisfiedState(curMode == this.data.airplaneMode);
     }
 
     @Override
     public void start() {
         context.registerReceiver(broadcastReceiver, intentFilter);
-        boolean curMode = (Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0);
-        newSatisfiedState(curMode == this.data.airplaneMode);
     }
 
     @Override
