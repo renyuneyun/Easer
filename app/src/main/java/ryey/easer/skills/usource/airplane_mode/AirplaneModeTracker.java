@@ -32,14 +32,11 @@ import ryey.easer.skills.condition.SkeletonTracker;
 
 public class AirplaneModeTracker extends SkeletonTracker<AirplaneModeUSourceData> {
 
-    private final AirplaneModeUSourceData condition;
-    private boolean curMode;
-
     private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (Intent.ACTION_AIRPLANE_MODE_CHANGED.equals(intent.getAction())) {
-                updateTrackerMode(intent.getBooleanExtra("state", false));
+                newSatisfiedState(intent.getBooleanExtra("state", false) == data.airplaneMode);
             }
         }
     };
@@ -49,25 +46,17 @@ public class AirplaneModeTracker extends SkeletonTracker<AirplaneModeUSourceData
                         @NonNull PendingIntent event_positive,
                         @NonNull PendingIntent event_negative) {
         super(context, data, event_positive, event_negative);
-        this.condition = data;
     }
 
     @Override
     public void start() {
         context.registerReceiver(broadcastReceiver, intentFilter);
-        curMode = (Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0);
-        newSatisfiedState(condition.match(curMode));
+        boolean curMode = (Settings.System.getInt(context.getContentResolver(), Settings.System.AIRPLANE_MODE_ON, 0) != 0);
+        newSatisfiedState(curMode == this.data.airplaneMode);
     }
 
     @Override
     public void stop() {
         context.unregisterReceiver(broadcastReceiver);
-    }
-
-    private void updateTrackerMode(boolean newMode) {
-        if (curMode == newMode)
-            return;
-        curMode = newMode;
-        newSatisfiedState(condition.match(curMode));
     }
 }

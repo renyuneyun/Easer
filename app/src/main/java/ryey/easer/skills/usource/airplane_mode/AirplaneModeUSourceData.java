@@ -36,14 +36,14 @@ import ryey.easer.plugin.PluginDataFormat;
 
 public class AirplaneModeUSourceData implements USourceData {
 
-    boolean airplaneMode;
+    final boolean airplaneMode;
 
-    private static final String T_airplaneMode = "airplaneMode";
+    private static final String K_MODE = "mode";
 
     AirplaneModeUSourceData(@NonNull String data, @NonNull PluginDataFormat format, int version) throws IllegalStorageDataException {
         try {
             JSONObject jsonObject = new JSONObject(data);
-            this.airplaneMode = jsonObject.optBoolean(T_airplaneMode);
+            this.airplaneMode = jsonObject.getBoolean(K_MODE);
         } catch (JSONException e) {
             e.printStackTrace();
             throw new IllegalStorageDataException(e);
@@ -59,7 +59,7 @@ public class AirplaneModeUSourceData implements USourceData {
     public String serialize(@NonNull PluginDataFormat format) {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put(T_airplaneMode, airplaneMode);
+            jsonObject.put(K_MODE, airplaneMode);
         } catch (JSONException e) {
             Logger.e(e, "Error putting %s data", getClass().getSimpleName());
             e.printStackTrace();
@@ -79,10 +79,6 @@ public class AirplaneModeUSourceData implements USourceData {
         if (!(obj instanceof AirplaneModeUSourceData))
             return false;
         return ((AirplaneModeUSourceData) obj).airplaneMode == airplaneMode;
-    }
-
-    public boolean match(boolean airplaneMode) {
-        return airplaneMode == this.airplaneMode;
     }
 
     @Nullable
