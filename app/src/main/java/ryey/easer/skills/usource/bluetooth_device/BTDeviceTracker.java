@@ -75,11 +75,6 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
                     @NonNull PendingIntent event_positive,
                     @NonNull PendingIntent event_negative) {
         super(context, data, event_positive, event_negative);
-    }
-
-    @Override
-    public void start() {
-        context.registerReceiver(connReceiver, filter);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR2) {
             BluetoothManager bluetoothManager = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);
             for (int profile : new int[]{BluetoothProfile.GATT, BluetoothProfile.GATT_SERVER}) {
@@ -94,9 +89,13 @@ public class BTDeviceTracker extends SkeletonTracker<BTDeviceUSourceData> {
     }
 
     @Override
+    public void start() {
+        context.registerReceiver(connReceiver, filter);
+    }
+
+    @Override
     public void stop() {
         context.unregisterReceiver(connReceiver);
-        matched_devices = 0;
     }
 
     private boolean is_target(BluetoothDevice device) {
