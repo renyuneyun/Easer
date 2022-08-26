@@ -19,7 +19,6 @@
 
 package ryey.easer.skills.usource.do_not_disturb;
 
-import android.app.NotificationManager;
 import android.os.Build;
 import android.os.Parcel;
 
@@ -33,7 +32,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
