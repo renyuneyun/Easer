@@ -225,7 +225,7 @@ public class IntentOperationData implements OperationData, Reused {
                 String type = extra.type;
                 extras.add(new ExtraItem(key, value, type));
             }
-            data.extras = Extras.mayConstruct(extras);
+            intentData.extras = Extras.mayConstruct(extras);
         }
         IntentOperationData ret = new IntentOperationData(intentData);
         ret.setSkillID(skillID());
