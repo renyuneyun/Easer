@@ -22,9 +22,11 @@ package ryey.easer.skills.usource.do_not_disturb;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import ryey.easer.R;
 import ryey.easer.commons.local_skill.SourceCategory;
@@ -50,7 +52,7 @@ public class DoNotDisturbUSourceSkill implements USourceSkill<DoNotDisturbUSourc
 
     @Override
     public boolean isCompatible(@NonNull final Context context) {
-        return true;
+        return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M);
     }
 
     @Nullable
@@ -63,6 +65,7 @@ public class DoNotDisturbUSourceSkill implements USourceSkill<DoNotDisturbUSourc
     public void requestPermissions(@NonNull Activity activity, int requestCode) {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
     public USourceDataFactory<DoNotDisturbUSourceData> dataFactory() {
@@ -75,22 +78,26 @@ public class DoNotDisturbUSourceSkill implements USourceSkill<DoNotDisturbUSourc
         return SourceCategory.device;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
     public SkillViewFragment<DoNotDisturbUSourceData> view() {
         return new DoNotDisturbSkillViewFragment();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public AbstractSlot<DoNotDisturbUSourceData> slot(@NonNull Context context, @ValidData @NonNull DoNotDisturbUSourceData data) {
         return new DoNotDisturbSlot(context, data);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public AbstractSlot<DoNotDisturbUSourceData> slot(@NonNull Context context, @NonNull DoNotDisturbUSourceData data, boolean retriggerable, boolean persistent) {
         return new DoNotDisturbSlot(context, data, retriggerable, persistent);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @NonNull
     @Override
     public Tracker<DoNotDisturbUSourceData> tracker(@NonNull Context context,

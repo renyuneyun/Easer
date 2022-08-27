@@ -19,12 +19,10 @@
 
 package ryey.easer.skills.usource.do_not_disturb;
 
-import android.os.Build;
 import android.os.Parcel;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 import com.orhanobut.logger.Logger;
 
@@ -40,7 +38,6 @@ import ryey.easer.commons.local_skill.dynamics.Dynamics;
 import ryey.easer.commons.local_skill.usource.USourceData;
 import ryey.easer.plugin.PluginDataFormat;
 
-@RequiresApi(api = Build.VERSION_CODES.M)
 public class DoNotDisturbUSourceData implements USourceData {
 
     Set<Integer> doNotDisturbModes = new HashSet<>();
@@ -106,11 +103,12 @@ public class DoNotDisturbUSourceData implements USourceData {
         return 0;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(doNotDisturbModes.size());
-        dest.writeIntArray(doNotDisturbModes.stream().mapToInt(Integer::intValue).toArray());
+        for (int mode : doNotDisturbModes) {
+            dest.writeInt(mode);
+        }
     }
 
     public static final Creator<DoNotDisturbUSourceData> CREATOR
@@ -125,10 +123,9 @@ public class DoNotDisturbUSourceData implements USourceData {
     };
 
     private DoNotDisturbUSourceData(Parcel in) {
-        int[] values = new int[in.readInt()];
-        in.readIntArray(values);
-        for (int value : values) {
-            doNotDisturbModes.add(value);
+        int size = in.readInt();
+        for (int i = 0; i < size; i++) {
+            doNotDisturbModes.add(in.readInt());
         }
     }
 }

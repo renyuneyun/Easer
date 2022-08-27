@@ -20,8 +20,10 @@
 package ryey.easer.skills.usource.do_not_disturb;
 
 import android.app.NotificationManager;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -31,6 +33,7 @@ import ryey.easer.commons.local_skill.ValidData;
 import ryey.easer.commons.local_skill.usource.USourceDataFactory;
 import ryey.easer.plugin.PluginDataFormat;
 
+@RequiresApi(api = Build.VERSION_CODES.M)
 class DoNotDisturbUSourceDataFactory implements USourceDataFactory<DoNotDisturbUSourceData> {
     @NonNull
     @Override
