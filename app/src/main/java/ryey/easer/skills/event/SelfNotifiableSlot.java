@@ -40,7 +40,7 @@ public abstract class SelfNotifiableSlot<T extends EventData> extends AbstractSl
     // Fields used in relevant Intent
     private static final String ACTION_SATISFIED = "ryey.easer.triggerlotus.abstractslot.SATISFIED";
     private static final String ACTION_UNSATISFIED = "ryey.easer.triggerlotus.abstractslot.UNSATISFIED";
-    private static final String CATEGORY_NOTIFY_SLOT = "ryey.easer.triggetlotus.category.NOTIFY_SLOT";
+    private static final String CATEGORY_NOTIFY_SLOT = "ryey.easer.triggerlotus.category.NOTIFY_SLOT";
     /*
      * Mechanisms and fields used to notify the slot itself, and then proceed to `onPositiveNotified()`.
      * This is because some system-level checking mechanisms (e.g. data/time) need a PendingIntent.
