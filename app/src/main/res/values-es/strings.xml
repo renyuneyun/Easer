@@ -42,8 +42,8 @@
     <string name="menu_clear">Limpiar</string>
     <string name="service_indicator_positive">Ejecutándose</string>
     <string name="service_indicator_negative">No ejecutándose</string>
-    <string name="activity_history__profile">Perfil</string>
-    <string name="activity_history__script">Guión</string>
+    <string name="activity_history__profile">Título Perfil</string>
+    <string name="activity_history__script">Título Guión</string>
     <string name="activity_history__time">Hora</string>
     <string name="activity_history__extra">Información adicional</string>
     <string name="activity_history__satisfaction">Estado</string>
@@ -59,7 +59,7 @@
     <string name="button_read_next_time">Leer la próxima vez</string>
     <string name="button_understand">Entendido</string>
     <string name="button_cancel">Cancelar</string>
-    <string name="button_ok">OK</string>
+    <string name="button_ok">Aceptar</string>
     <string name="text_lack_permission">Algunas habilidades NO tienen permisos suficientes.</string>
     <string name="button_see_detail">Ver detalles</string>
     <string name="text_notification_running_indicator_content">%s está ejecutándose en segundo plano</string>
