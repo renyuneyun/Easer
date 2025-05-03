@@ -44,8 +44,8 @@
     <string name="menu_clear">தெளிவான</string>
     <string name="service_indicator_positive">இயங்கும்</string>
     <string name="service_indicator_negative">ஓடவில்லை</string>
-    <string name="activity_history__profile">\@string/title_profile</string>
-    <string name="activity_history__script">\@string/title_script</string>
+    <string name="activity_history__profile">\@சரம்/தலைப்பு_தன்விவரம்</string>
+    <string name="activity_history__script">\@சரம்/தலைப்பு_கைஉரை</string>
     <string name="activity_history__time">நேரம்</string>
     <string name="activity_history__extra">கூடுதல் செய்தி</string>
     <string name="activity_history__satisfaction">நிலை</string>
@@ -70,7 +70,7 @@
     <string name="text_predefined_event">முன் வரையறுக்கப்பட்ட நிகழ்வு</string>
     <string name="text_inline_event">இன்லைன் நிகழ்வு</string>
     <string name="text_use_condition">நிபந்தனையைப் பயன்படுத்துங்கள்</string>
-    <string name="text_repeatable_desc">மீண்டும்</string>
+    <string name="text_repeatable_desc">மறுநிகழ்தல்</string>
     <string name="text_reverse_desc">தலைகீழ் காட்சி</string>
     <string name="text_volatile">வெடிமையுடைய</string>
     <string name="text_persistent">விடாமுயற்சி</string>
@@ -92,7 +92,7 @@
     <string name="prompt_error_logged">ஈசர் ஒரு பிழையை பதிவு செய்தது. பதிவு கோப்பகத்தின் பிழை துணை அடைவு பார்க்கவும்.</string>
     <string name="text_app_description">உங்கள் சாதனத்தில் (கள்) வழக்கமான செயல்களை தானியக்கமாக்குவதன் மூலம் உங்கள் வாழ்க்கையை எளிதாக்குங்கள்.\n வெவ்வேறு நிகழ்வுகளை சங்கிலி செய்து, அவற்றுடன் தொடர்புடைய செயல்கள் செய்யட்டும். இனி அவற்றை மனதில் வைத்திருக்க தேவையில்லை!\n இந்த பயன்பாடு சயனோசென்மோடின் \'சுயவிவரம்\' பொறிமுறையால் ஈர்க்கப்பட்டது மற்றும் IFTTT. அசல் உள்ளுணர்வு குறிப்பிட்ட நேரம் அல்லது குறிப்பிட்ட வைஃபை இணைப்புகளில் சுயவிவரத்தை தானாக மாற்றுவதாகும், மேலும் இது மிகவும் பொதுவான பயன்பாட்டிற்காக விரிவாக்கப்பட்டது.\n நினைவூட்டல்: ஈசர் இன்னும் வளர்ச்சியில் உள்ளது. இதில் பிழைகள் இருக்கலாம் மற்றும் இடைமுகம் நிச்சயமாக மேம்படுத்தப்பட வேண்டும். Todo.en.md (அல்லது நீங்கள் சீன மொழியைப் படிக்க முடிந்தால் Todo.md இல்) ரெப்போவில் உதவ வேண்டும்.</string>
     <string name="url_donate">https://renyuneyun.github.io/Easer/en/DONATE.html</string>
-    <string name="text_license">இந்த நிரல் இலவச மென்பொருள்: நீங்கள் அதை மறுபகிர்வு செய்யலாம் மற்றும்/அல்லது இலவச மென்பொருள் அறக்கட்டளையால் வெளியிடப்பட்ட குனு பொது பொது உரிமத்தின் விதிமுறைகளின் கீழ் மாற்றலாம், உரிமத்தின் பதிப்பு 3 அல்லது (உங்கள் விருப்பத்தில்) பின்னர் எந்த பதிப்பும்.\n இந்த திட்டம் பயனுள்ளதாக இருக்கும் என்ற நம்பிக்கையில் விநியோகிக்கப்படுகிறது, ஆனால் எந்த உத்தரவாதமும் இல்லாமல்; ஒரு குறிப்பிட்ட நோக்கத்திற்காக வணிகத்தன்மை அல்லது உடற்தகுதி ஆகியவற்றின் மறைமுக பொறுப்பு கூட இல்லாமல். மேலும் விவரங்களுக்கு குனு பொது பொது உரிமத்தைப் பார்க்கவும்.\n இந்த திட்டத்துடன் குனு பொது பொது உரிமத்தின் நகலை நீங்கள் பெற்றிருக்க வேண்டும். இல்லையென்றால், https://www.gnu.org/licenses/ ஐப் பார்க்கவும்</string>
+    <string name="text_license">இந்த நிரல் இலவச மென்பொருள்: நீங்கள் அதை மறுபகிர்வு செய்யலாம் மற்றும்/அல்லது இலவச மென்பொருள் அறக்கட்டளையால் வெளியிடப்பட்ட குனு பொது பொதுமக்கள் உரிமத்தின் விதிமுறைகளின் கீழ் மாற்றலாம், உரிமத்தின் பதிப்பு 3 அல்லது (உங்கள் விருப்பத்தில்) பின்னர் எந்தப் பதிப்பும்.\nஇந்தத் திட்டம் பயனுள்ளதாக இருக்கும் என்ற நம்பிக்கையில் விநியோகிக்கப்படுகிறது, ஆனால் எந்த உத்தரவாதமும் இல்லாமல்; ஒரு குறிப்பிட்ட நோக்கத்திற்காக வணிகத்தன்மை அல்லது உடற்தகுதி ஆகியவற்றின் மறைமுக பொறுப்பு கூட இல்லாமல். மேலும் விவரங்களுக்குக் குனு பொது பொதுமக்கள் உரிமத்தைப் பார்க்கவும்.\nஇந்தத் திட்டத்துடன் குனு பொது பொதுமக்கள் உரிமத்தின் நகலை நீங்கள் பெற்றிருக்க வேண்டும். இல்லையென்றால், https://www.gnu.org/licenses/ ஐப் பார்க்கவும்</string>
     <string name="pref_category_functionality">செயல்கூறு</string>
     <string name="pref_category_personalise">தனிப்பயனாக்கு</string>
     <string name="pref_category_data_manage">தரவை நிர்வகிக்கவும்</string>
@@ -128,11 +128,11 @@
     <string name="message_convert_data_abort">தரவு மாற்றம் கைவிடப்பட்டது.</string>
     <string name="message_convert_data_error">தரவை மாற்ற முடியவில்லை. விவரங்களுக்கு பதிவைப் பார்க்கவும்.</string>
     <string name="title_welcome_message">வரவேற்கிறோம்</string>
-    <string name="welcome_message_1">வரவேற்கிறோம்.\n\n ஈசரைப் பயன்படுத்துவதற்கு முன்பு படிக்க வேண்டிய சில அடிப்படை தகவல்கள் இங்கே.\n\n விக்கி &lt;a href = \"https://github.com/renyuneyun/easer/wiki/faq\"</string>
+    <string name="welcome_message_1">வரவேற்கிறோம்.\n\nஅழிப்பானைப் பயன்படுத்துவதற்கு முன்பு படிக்க வேண்டிய சில அடிப்படை தகவல்கள் இங்கே.\n\nவிக்கி <a href="https://github.com/renyuneyun/Easer/wiki/FAQ">அகேகே</a>.</string>
     <string name="welcome_message_2">ஈசரில் வெவ்வேறு செயல்பாடுகளை வழங்கும் பல தொகுதிகள் உள்ளன. அமைப்புகளில் அவற்றை இயக்கவும் அல்லது அணைக்கவும்.\n\n தொடர்புடைய அனுமதிகள் (ஒவ்வொரு செயலில் உள்ள தொகுதிக்கும்) பயன்பாட்டிற்கு முன் வழங்கப்பட வேண்டும்.\n\n\n (எல்லாம் இயல்பாகவே உள்ளது.)</string>
     <string name="welcome_message_3">ச்கிரிப்ட்கள் <a href="https://en.wikipedia.org/wiki/graph_(abstract_data_type)"> வரைபடங்கள் </a>, தொடர்புடைய முன்னோடிகளை (பெற்றோர்) தேர்ந்தெடுப்பதன் மூலம் கட்டமைக்கப்பட்டுள்ளன.\n\n தோராயமாக பேசுவது:\n - முன்னோடிகள் முதல் வாரிசுகள் வரை, வழக்கு செய்யப்படுகிறது.\n - முனைகளுக்கு இடையில் அல்லது வழக்கு செய்யப்படுகிறது.\n - வாரிசு குறித்து பல முன்னோடிகள் மற்றும் உறவு உள்ளது.</string>
     <string name="title_welcome_message_privacy">தனியுரிமை!</string>
-    <string name="welcome_message_privacy">தனியுரிமை முக்கியமானது!\n\n ஈசர் &lt;a href = \"https://en.wikipedia.org/wiki/free_software\"&gt; இலவச மென்பொருள் &lt;/a&gt; (திறந்த-மூல மென்பொருள்), அனைவரும் பயன்படுத்த, படிப்பது, மாற்றுவது மற்றும் பகிர்வதை உறுதிசெய்கிறது.\n\n உங்கள் தரவின் ஒவ்வொரு பகுதியையும் நீங்கள் வைத்திருக்கிறீர்கள். பதிவுகள் உட்பட அனைத்தும் உங்கள் சாதனத்தில் வாழ்கின்றன.\n மேலும் தகவலுக்கு &lt;a href = \"https://github.com/renyuneyun/easer/blob/master/privacy.md\"&gt; தனியுரிமை அறிவிப்பைக் காண்க</string>
+    <string name="welcome_message_privacy">தனியுரிமை முக்கியமானது!\n\nஅழிப்பான் <a href="https://en.wikipedia.org/wiki/Free_software"> இலவச மென்பொருள் </a> (திறந்த-மூல மென்பொருள்), அனைவரும் பயன்படுத்த, படிப்பது, மாற்றுவது மற்றும் பகிர்வதை உறுதிசெய்கிறது.\n\nஉங்கள் தரவின் ஒவ்வொரு பகுதியையும் நீங்கள் வைத்திருக்கிறீர்கள். பதிவுகள் உட்பட அனைத்தும் உங்கள் சாதனத்தில் வாழ்கின்றன.\nமேலும் தகவலுக்கு <a href="https://github.com/renyuneyun/Easer/blob/master/Privacy.md"> தனியுரிமை அறிவிப்பைக்</a> காண்க</string>
     <string name="alert_update_storage_data_title">பழைய தரவு பதிப்பு காணப்பட்டது</string>
     <string name="alert_update_storage_data">பொருந்தக்கூடிய வகையில், உங்கள் தரவை புதிய வடிவத்திற்கு புதுப்பிக்க அமைப்புகளில் ஒன்வெர்ட் தரவைத் தேர்ந்தெடுக்கவும்.</string>
     <string name="message_future_change_title">விரைவில் மாறுகிறது</string>
