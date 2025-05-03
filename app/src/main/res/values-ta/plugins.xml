@@ -48,7 +48,7 @@
     <string name="remote_host">தொலை புரவலன்</string>
     <string name="send_data">தரவை அனுப்பவும்</string>
     <string name="check_reply">பதிலைச் சரிபார்க்கவும்</string>
-    <string name="reply_data">தரவு தரவு</string>
+    <string name="reply_data">பதில் தரவு</string>
     <string name="event_tcp_trip__dynamics_remote_host">தொலை புரவலன்</string>
     <string name="event_tcp_trip__dynamics_remote_ip">தொலை ஐபி</string>
     <string name="event_tcp_trip__dynamics_remote_port">தொலை துறைமுகம்</string>
@@ -62,7 +62,7 @@
     <string name="exact">சரியான</string>
     <string name="event_widget">விட்செட்</string>
     <string name="inexact">செயலற்றது</string>
-    <string name="repeative_timer">மீண்டும் மீண்டும் டைமர்?</string>
+    <string name="repeative_timer">மறுநிகழ்வு காலங்காட்டி?</string>
     <string name="repeat">மீண்டும்</string>
     <string name="one_time">ஒரு முறை</string>
     <string name="minutes">நிமிடங்கள்</string>
@@ -140,7 +140,7 @@
     <string name="o_play_media">மீடியா விளையாடுங்கள்</string>
     <string name="o_play_media_text_file">கோப்பு பாதை</string>
     <string name="o_play_media_loop">மீடியாவை வளையுங்கள்</string>
-    <string name="o_play_media_repeat_times">மீண்டும் மீண்டும் நேரம்</string>
+    <string name="o_play_media_repeat_times">மறுநிகழ்வு நேரங்கள்</string>
     <string name="operation_ringer_mode">அழைப்புகள் பயன்முறை</string>
     <string name="ringer_mode_normal">சாதாரண</string>
     <string name="ringer_mode_vibrate">அதிர்வு</string>
