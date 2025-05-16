@@ -35,12 +35,7 @@
     <string name="message_future_change_title">Майбутні зміни</string>
     <string name="alert_update_storage_data">Виберіть \"Конвертувати дані\" в налаштуваннях, щоб оновити дані в новий формат, для сумісності.</string>
     <string name="alert_update_storage_data_title">Знайдено дані старої версії</string>
-    <string name="welcome_message_privacy">Конфіденційність важлива!
-\n
-\nEraser - це <a href="https://uk.wikipedia.org/wiki/Вільне_програмне_забезпечення">вільне програмне забезпечення</a> з відкритим вихідним кодом, що передбачає використання, вивчення, зміну і поширення ким завгодно.
-\n
-\nСаме ви володієте кожною частиною ваших даних. Все зберігається у вашому пристрої, включно з журналами.
-\nДокладніше про це можна дізнатися з <a href="https://github.com/renyuneyun/Easer/blob/master/Privacy.md">Декларації про конфіденційність</a></string>
+    <string name="welcome_message_privacy">Конфіденційність важлива!\n\nEaser — це <a href="https://en.wikipedia.org/wiki/Free_software">вільне програмне забезпечення</a> (програмне забезпечення з відкритим вихідним кодом), що гарантує, що кожен може його використовувати, вивчати, змінювати та поширювати.\n\nВИ володієте кожною частиною своїх даних. Усе зберігається на вашому пристрої, включаючи журнали.\nДив. <a href="https://github.com/renyuneyun/Easer/blob/master/Privacy.md">Декларація про конфіденційність</a> для отримання додаткової інформації</string>
     <string name="title_welcome_message_privacy">Конфіденційність!</string>
     <string name="welcome_message_3">Скрипти організовані у вигляді <a href="https://uk.wikipedia.org/wiki/Граф_(абстрактний_тип_даних)">графів</a> , обираючи відповідних попередників (батьків).
 \n
@@ -106,7 +101,7 @@
     <string name="prompt_save_failed">Не вдалося зберегти</string>
     <string name="hint_condition_title">Назва умови</string>
     <string name="hint_profile_title">Назва профілю</string>
-    <string name="hint_script_title">Назва скрипта</string>
+    <string name="hint_script_title">Назва сценарій</string>
     <string name="hint_event_title">Назва події</string>
     <string name="toggle_active">Активний</string>
     <string name="text_dynamics">Динамічне посилання</string>
