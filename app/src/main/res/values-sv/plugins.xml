@@ -37,7 +37,7 @@
     <string name="choice_start_of">Start av</string>
     <string name="choice_end_of">Slutet av</string>
     <string name="choice_any_event">Varje händelse</string>
-    <string name="event_broadcast">Ta emot sändning</string>
+    <string name="event_broadcast"></string>
     <string name="broadcast_action">Åtgärd</string>
     <string name="broadcast_category">Kategori</string>
     <string name="broadcast_type">Typ</string>
