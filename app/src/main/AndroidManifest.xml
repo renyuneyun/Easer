@@ -33,7 +33,8 @@
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="com.wireguard.android.permission.CONTROL_TUNNELS"/>
-
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND"  />
+    
     <application
         android:name=".EaserApplication"
         android:allowBackup="true"
