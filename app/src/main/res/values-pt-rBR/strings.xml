@@ -166,9 +166,7 @@
     <string name="help_event">\"Eventos\" representam ocorrências de curto prazo (instantâneas) no seu dispositivo ou remotamente. 
 \nPor exemplo, receber uma notificação ou digitalizar uma etiqueta NFC. 
 \nPor favor leia o <a href="https://github.com/renyuneyun/Easer/wiki">documento</a> para mais informações.</string>
-    <string name="help_condition">\"Condição\" representa uma condição duradoura (mas geralmente não é para sempre) no seu dispositivo ou remotamente. 
-\nPor exemplo, após a conexão Wi-Fi ou quando a tela é desligada. 
-\nPor favor, consulte o <a href="https://github.com/renyuneyun/Easer/wiki"> documento </a> para mais informações.</string>
+    <string name="help_condition">\"Condição\" representa uma condição duradoura (mas geralmente não é para sempre) no seu dispositivo ou remotamente.\nPor exemplo, após a conexão Wi-Fi ou quando a tela é desligada.\nPor favor, consulte o <a href="https://github.com/renyuneyun/Easer/wiki"> documento </a> para mais informações.</string>
     <string name="help_profile">\"Perfil\" é um conjunto de operações. Cada operação representa um tipo específico de ação. 
 \nPor exemplo, ative o Bluetooth ou envie um SMS. 
 \nPor favor, consulte o <a href="https://github.com/renyuneyun/Easer/wiki"> documento </a> para mais informações.</string>
