@@ -243,8 +243,8 @@
     <string name="usource_bt_device_dynamics_device_name">Device Name</string>
     <string name="usource_bt_device_dynamics_device_address">Device Address</string>
 
-    <string name="usource_bluetooth_enabled">Bluetooth Enabled</string>
-    <string name="usource_bluetooth_enabled_bluetooth_is_enabled">Bluetooth is enabled?</string>
+    <string name="usource_bluetooth_enabled">Bluetooth</string>
+    <string name="usource_bluetooth_enabled_bluetooth_is_enabled">Is Bluetooth on?</string>
 
     <string name="usource_calendar">Calendar</string>
     <string name="calendar_select_dialog_title">Select Calendar</string>
@@ -323,7 +323,7 @@
     <string name="usource_wificonn_select_dialog_title">Select Wi-Fi AP</string>
     <string name="usource_wificonn_wait_for_result">Awaiting Wi-Fi scan result</string>
 
-    <string name="usource_wifi_enabled">WiFi Enabled</string>
-    <string name="usource_wifi_enabled_wifi_is_enabled">WiFi is enabled?</string>
+    <string name="usource_wifi_enabled">Wi-Fi</string>
+    <string name="usource_wifi_enabled_wifi_is_enabled">Is Wi-Fi on?</string>
 
 </resources>
