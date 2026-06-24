@@ -102,7 +102,7 @@
     <string name="pref_welcome_title">வரவேற்பு செய்தியைக் காட்டு</string>
     <string name="pref_welcome_summary">பயன்பாட்டைத் திறக்கும்போது வரவேற்பு செய்தியைக் காட்டு</string>
     <string name="pref_logging_title">வெளிப்புற பதிவை இயக்கவும்</string>
-    <string name="pref_logging_summary">பிழை அறிக்கைகளுக்கு உதவ வெளிப்புற சேமிப்பக சாதனங்களுக்கான பதிவுகள் (/SDCARD/LOGGER).\n அடுத்த பயன்பாட்டு தொடக்கத்தில் மாற்றங்கள் நடைமுறைக்கு வருகின்றன.</string>
+    <string name="pref_logging_summary">பிழை அறிக்கைகளுக்கு உதவ வெளிப்புற சேமிப்பக சாதனங்களுக்கான பதிவுகள் (/sdcard/logger).\n அடுத்த பயன்பாட்டு தொடக்கத்தில் மாற்றங்கள் நடைமுறைக்கு வருகின்றன.</string>
     <string name="pref_use_root_title">ரூட் அம்சங்களைப் பயன்படுத்தவும்</string>
     <string name="pref_use_root_summary">சில சாதனங்களில் பொருந்தக்கூடிய சிக்கல்களைத் தீர்க்க குறிப்பிட்ட செயல்பாடுகளுக்கு (திறன்கள்) ரூட் அனுமதியைப் பயன்படுத்தவும்.</string>
     <string name="pref_cooldown_title">நிகழ்வு ஒரு முறை மட்டுமே…</string>
