@@ -8,7 +8,7 @@ Easer [![Build Status](https://travis-ci.org/renyuneyun/Easer.svg?branch=master)
 
 Ease your life by automatically performing routine actions.
 
-**Notice**: Due to recent time constraints (since late 2020), Easer's maintainance speed will be affected. But since the main structure and hierarchy is stable, no drastic changes to Easer's *structure* need to be made (but extensions may require some changes of course), except for supporting remote Plugins of Events and Conditions (and supported federated inter-machine automation, as the long-term vision). Interested people can read the relevant sections below to lear how to add the functions you would like to see, or how to locate bugs. PRs will be read whenever there is time, and be merged and release in the usual way -- beta first, and then stable.
+**Notice**: Due to recent time constraints (since late 2020), Easer's maintainance speed will be affected. But since the main structure and hierarchy is stable, no drastic changes to Easer's *structure* need to be made (but extensions may require some changes of course), except for supporting remote Plugins of Events and Conditions (and supported federated inter-machine automation, as the long-term vision). Interested people can read the relevant sections below to learn how to add the functions you would like to see, or how to locate bugs. PRs will be read whenever there is time, and be merged and release in the usual way -- beta first, and then stable.
 
 Introduction
 -----
@@ -35,7 +35,7 @@ Details are described in [this document](https://renyuneyun.github.io/Easer/en/E
 ### Remote Skill (Plugin)
 
 *Remote Skill* (called *Remote Plugin* previously) is introduced in v0.7, aiming at using standalone applications to extend Easer's functionality.
-Each *remote skill* is a stanalone app; it is in theory also possible to include multiple *remote skills* in one app. Note this feature is rather new and the interface might not be stable yet (though it's unlikely the interface will change much).
+Each *remote skill* is a standalone app; it is in theory also possible to include multiple *remote skills* in one app. Note this feature is rather new and the interface might not be stable yet (though it's unlikely the interface will change much).
 
 Currently, only *Operation* can be extended as *remote skills*. [The *diagram* directory](diagram/) contains some useful information, e.g. [a sequence diagram](diagram/communication.png). [This repo](https://github.com/renyuneyun/EaserOperationPluginExample) is an example implementation of *remote operation plugin*, as well as documents. Better documentations are also welcome.
 
@@ -57,7 +57,7 @@ Issue expecting ideas are labeled with [RFC](https://github.com/renyuneyun/Easer
 
 Want to do more but don't know where to start? See issues labeled with GFC (Good For Contributors) [L0](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L0%22), [L1](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L1%22), [L2](https://github.com/renyuneyun/Easer/issues?q=is%3Aissue+is%3Aopen+label%3A%22GFC%3A+L2%22). These issues usually have clear target and involve few components; the L0, L1 and L2 are my subjective classification of the level of difficulty (ascending).
 
-If you are a developer, you may possess the knowledge and time to solve some issues. You can fork the repo, solve the problem, and create a pull request. Then, your code can be merged, and you can be appreciated by others （and you will be listed in the *Contributors* list unless you don't like to).
+If you are a developer, you may possess the knowledge and time to solve some issues. You can fork the repo, solve the problem, and create a pull request. Then, your code can be merged, and you can be appreciated by others (and you will be listed in the *Contributors* list unless you don't like to).
 You're also welcome to create pull requests for issues not raised by others, but first, please create an issue describing what you want to do (and that you are going to do it).
 
 ### Test coverage
@@ -108,4 +108,3 @@ The expected functions of Easer require access to personal information (e.g. loc
 Because of the design of Easer, functionality will eventually become modules / plugins. The GPL requires that derived works also be licensed under the GPL, and thus prevents malicious code from sneaking into these parts.
 
 In fact, ensuring that derived works / plugins are licensed under the **GPL** is unnecessary -- they only need to be **open source**. However, GPL is the only license (that I know of) which requires that derived works / plugins are open sourced, so it's the only choice.
-
